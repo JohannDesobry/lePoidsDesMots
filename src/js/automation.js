@@ -4,13 +4,11 @@ export default class Automation {
   }
 
   launchApp() {
-    console.log(`${this.story} app launched my dear`)
-
     // Get app element to append messages in scenario
     const content = document.querySelector('.device__content')
 
     // Create generic App message element
-    let i = 0
+    
     // let appMessage = document.createElement('div')
     // let textnode = `${this.story}.step${key}[${i}].content}`
 
@@ -20,15 +18,12 @@ export default class Automation {
       console.log(`content loaded`)
       
       // Display messages in scenario
-      for(const key in story)
+      for(const key in this.story)
       {
-        console.log(bar)
-        // for(let i = 0; i < story.stepkey.length; i++)
-        // {
-        //   console.log(bar)
-        // }
-        //(scenario.step1[1].content)
-        //content.appendChild
+        if(this.story[key].content) {
+          let x = this.story[key].content
+          console.log(`${x} yeah baby`)
+        }
       }
     }
   }
