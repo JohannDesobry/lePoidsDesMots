@@ -121,6 +121,7 @@ export default class Automation {
           //   // this.displayAppMessages(0)
           // })
           textAnswers.appendChild(div)
+          console.log('hello')
           let _this = this
           let a = this.story[this.i][this.j+i].chapterTarget
           let b = this.story[this.i][this.j+i].messageTarget
@@ -170,6 +171,7 @@ export default class Automation {
             })
           })
         }
+      }
 
         // let answers = document.querySelectorAll('.device__answersBar')
         // console.log(answers)
@@ -202,7 +204,7 @@ export default class Automation {
         setTimeout(function() {
           _this.displayAppMessages(_this.j+=1)
         }, 1000)
-        console.log(`j: ${this.j}`)
+        //console.log(`j: ${this.j}`)
       }
 
 
@@ -215,7 +217,7 @@ export default class Automation {
       //   this.displayAppMessages(j=0)
       // }
       //this.displayAppMessages(j+=1)
-    }
+    
 
     function scroll (context) {
       let body = document.body
