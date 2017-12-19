@@ -2,6 +2,7 @@
 
 // Tools
 @import 'tools/variables';
+@import 'tools/fonts';
 @import 'tools/mixins';
 
 // Vendors
@@ -11,5 +12,15 @@
 @import 'base/base';
 
 // Components
-@import 'components/device';
+
+@import 'components/_appMessage';
+@import 'components/_answerMessage';
+@import 'components/_answersText';
+
+
 // Layout
+@import 'layout/device';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/settings';
+

@@ -1,0 +1,189 @@
+.device__settings {
+    position: fixed;
+    top: 2.4rem;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    background-color: $white;
+    z-index: $zindex-5;
+    opacity: 0;
+    transition: 0.15s all ease-in-out;
+}
+
+.device__settingsHeader {
+    position: relative;
+    width: 100%;
+    height: 5.6rem;
+    background-color: $main-color;
+}
+
+.device__settingsHeader--back {
+    position: absolute;
+    top: 50%;
+    left: 1.8rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.device__settingsHeader--title p{
+    position: absolute;
+    top: 50%;
+    left: 5.8rem;
+    transform: translateY(-50%);
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    color: $answer;
+}
+
+.device__settingsContainer {
+    padding: 1.8rem 2.5rem 5rem 2.5rem;
+    width: 100%;
+}
+
+.device__settingsAudio--chapo, .device__settingsLanguage--chapo {
+    position: relative;
+}
+
+.device__settingsLanguage--chapo {
+    margin-top: 3.5rem;
+}
+
+.device__settings--bar {
+    position: absolute;
+    top: 50%;
+    left: 7.3rem;
+    width: calc(100% - 7.5rem);
+    max-width: 23rem;
+	height: 1px;
+	border: solid 1px rgba(54, 56, 62, 0.5);
+}
+
+.device__settingsAudio--title, .device__settingsLanguage--title {
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: left;
+    color: $setting;
+}
+
+.device__settings.active {
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.device__settingsAudioContent, .device__settingsLanguageContent {
+    margin-top: 2.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.device__settingsAudioContent--vol, .device__settingsAudioContent--music, .device__settingsAudioContent--vibrator {
+    position: relative;
+    width: 8.8rem;
+    height: 9.5rem;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: $box-shadow;
+}
+
+.device__settingsAudioContent--vol div, .device__settingsAudioContent--music div, .device__settingsAudioContent--vibrator div {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.device__settingsAudioContent--vol p, .device__settingsAudioContent--music p, .device__settingsAudioContent--vibrator p {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    color: #9a9b9e;
+}
+
+.device__settingsLanguageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+            
+.device__settingsLanguageContent--vol, .device__settingsLanguageContent--music {
+    position: relative;
+    width: 31.1rem;
+    height: 4.8rem;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0 2px 6px 0 rgba(54, 56, 62, 0.12);
+    margin-bottom: 2.2rem;
+}
+            
+.device__settingsLanguageContent--vol div, .device__settingsLanguageContent--music div {
+    position: absolute;
+    left: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+            
+.device__settingsLanguageContent--vol p, .device__settingsLanguageContent--music p {
+    position: absolute;
+    left: 7.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    color: $black;
+}
+
+.device__settingsRestart {
+    margin-top: 5.6rem;
+}
+
+.device__settingsRestart--btn {
+    position: relative;
+    width: 31.1rem;
+    height: 4.8rem;
+    border-radius: 5px;
+    background-color: $main-color;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.device__settingsRestart--btn div{
+    position: absolute;
+    top: 50%;
+    left: 2.1rem;
+    transform: translateY(-50%);
+}
+
+.device__settingsRestart--btn p{
+    position: absolute;
+    top: 50%;
+    left: 6rem;
+    transform: translateY(-50%);
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    color: $white;
+}
+

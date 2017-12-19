@@ -1,6 +1,8 @@
 import Test from './test';
 import * as Scenario from './scenario.json';
 import Automation from './automation';
+import Answers from './answers';
+import Settings from './settings';
 
 let test = new Test();
 const scenario = Scenario

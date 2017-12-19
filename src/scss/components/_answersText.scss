@@ -1,0 +1,44 @@
+.device__answersText, .device__answersGif, .device__answersEmoji {
+    position: fixed;
+    bottom: 5rem;
+    left: 0;
+    width: 100vw;
+    height: 0rem;
+    border-top: $border-answer;
+    background-color: $white;
+}
+
+.device__answersBar {
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    width: 3.6rem;
+    height: 0.2rem;
+    transform: translateX(-50%);
+    background-color: $bar;
+}
+
+.post:last-child {
+    margin-bottom: 20rem;
+}
+
+.post:first-child {
+    margin-top: 10rem;
+}
+
+.device__answersText {
+    display: none;
+}
+
+.device__answersGif {
+    display: none;
+}
+
+.device__answersEmoji {
+    display: none;
+}
+
+.is-active {
+    display: block;
+    height: 13rem;
+}

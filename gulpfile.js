@@ -84,8 +84,8 @@ gulp.task('images', () =>
 
 gulp.task('fonts', () =>
   gulp
-    .src(config.src + 'font/**/*')
-    .pipe(gulp.dest(config.dist + 'assets/font'))
+    .src(config.src + 'fonts/**/*')
+    .pipe(gulp.dest(config.dist + 'assets/fonts'))
     .pipe(browserSync.stream())
 );
 

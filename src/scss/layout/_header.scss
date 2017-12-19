@@ -1,0 +1,125 @@
+// device container
+
+.device__header {
+    width: 100vw;
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zindex-5;
+}
+
+// status device content
+
+.device__headerStatus {
+    width: 100vw;
+    height: 2.4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    background: $main-color-darker;
+}
+
+// profil content
+
+.device__headerProfil {
+    position: relative;
+    width: 100vw;
+    height: 5.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: $main-color;
+}
+
+// picture Jade
+
+.device__headerProfil--picture .jade {
+    width: 3.6rem;
+    height: 3.6rem;
+    background: $main-color-darker;
+    border-radius: $border-radius;
+    margin-left: 2.4rem;
+}
+
+// Jade name + status container
+
+.device__headerProfil--info {
+    margin-left: 1.9rem;
+}
+
+// Jade name
+
+.device__headerProfil--info p.name {
+    font-family: $main-font;
+    font-size: 16px;
+	font-weight: 500;
+	line-height: 1.25;
+    text-align: left;
+    color: $white;
+}
+
+// Jade status
+
+.device__headerProfil--info p.status {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    text-align: left;
+    color: $white;
+}
+
+// device settings 
+
+.device__headerProfil--settings {
+    position: absolute;
+    right: 2.4rem;
+    cursor: pointer;
+}
+
+.device__headerProfil--settings p {
+    transition: 0.10s all ease-in-out;
+
+    &:hover {
+        transform: rotate(45deg);
+    }
+}
+
+// interval btw icons
+
+.device__headerStatus--network p, .device__headerStatus--wifi p, .device__headerStatus--battery p, .device__headerStatus--time p {
+    margin-right: 8px;
+}
+
+// activate font svg on icon
+
+.device__headerStatus--network, .device__headerStatus--wifi, .device__headerStatus--battery, {
+    font-family: 'Glyphter';
+}
+
+// some issues fix icons
+
+.device__headerStatus--network {
+    margin-right: -4px;
+}
+
+// some issues fix icons
+
+.device__headerStatus--battery {
+    margin-right: -4px;
+}
+
+// device timer
+
+.device__headerStatus--time p {
+    opacity: 0.9;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+}

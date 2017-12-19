@@ -1,18 +1,30 @@
 @charset "UTF-8";
 
 // Fonts
-$main-font: 'Open Sans', sans-serif;
+$main-font: 'Roboto', sans-serif;
+
 
 // Colors
 $white: #ffffff;
-
 $black: #36383E;
+$grey: #e6ebf0;
 
-$main-color: #FF6600;
-$main-color-hover: #EF5F00;
+$message: rgba(0, 0, 0, 0.87);
+$message-hour: rgba(54, 56, 62, 0.42);
+$answer: rgba(255, 255, 255, 0.87);
+$setting: rgba(54, 56, 62, 0.7);
+$main-color: #6054f6;
+$main-color-hover: #6054f6;
+$main-color-darker: #4C43C4;
 
 // Box shadow
-$box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.05);
+$box-shadow: 0 2px 6px 0 rgba(54, 56, 62, 0.12);
+
+// Border
+$border-answer : solid 1px rgba(54, 56, 62, 0.5);
+
+// Bar 
+$bar:  rgba(54, 56, 62, 0.3);
 
 // Border radius
 $border-radius: 40px;

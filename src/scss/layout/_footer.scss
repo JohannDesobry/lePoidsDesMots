@@ -1,0 +1,41 @@
+// footer container
+
+.device__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: $black;
+}
+
+// different way to answer
+
+.device__footerText, .device__footerGif, .device__footerEmoji {
+    width: calc(100vw/3);
+    text-align: center;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+
+    &:hover p:before{
+		opacity: 1;
+	}
+}
+
+.device__footerText p, .device__footerGif p, .device__footerEmoji p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    &:before {
+        transition: 0.15s all ease-in-out;
+    }
+}
+
