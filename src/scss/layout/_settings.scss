@@ -1,3 +1,5 @@
+// settings container
+
 .device__settings {
     position: fixed;
     top: 2.4rem;
@@ -13,12 +15,16 @@
     transition: 0.15s all ease-in-out;
 }
 
+// header setting
+
 .device__settingsHeader {
     position: relative;
     width: 100%;
     height: 5.6rem;
     background-color: $main-color;
 }
+
+// header btn back
 
 .device__settingsHeader--back {
     position: absolute;
@@ -27,6 +33,8 @@
     transform: translateY(-50%);
     cursor: pointer;
 }
+
+// back btn name
 
 .device__settingsHeader--title p{
     position: absolute;
@@ -41,10 +49,14 @@
     color: $answer;
 }
 
+// settings content container
+
 .device__settingsContainer {
     padding: 1.8rem 2.5rem 5rem 2.5rem;
     width: 100%;
 }
+
+// title section 
 
 .device__settingsAudio--chapo, .device__settingsLanguage--chapo {
     position: relative;
@@ -53,6 +65,8 @@
 .device__settingsLanguage--chapo {
     margin-top: 3.5rem;
 }
+
+// bar section
 
 .device__settings--bar {
     position: absolute;
@@ -64,6 +78,8 @@
 	border: solid 1px rgba(54, 56, 62, 0.5);
 }
 
+// font title
+
 .device__settingsAudio--title, .device__settingsLanguage--title {
     font-family: $main-font;
     font-size: 16px;
@@ -71,6 +87,8 @@
     text-align: left;
     color: $setting;
 }
+
+// bg settings activate 
 
 .device__settings.active {
     opacity: 1;
@@ -80,6 +98,8 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+// content section audio
 
 .device__settingsAudioContent, .device__settingsLanguageContent {
     margin-top: 2.7rem;
@@ -118,6 +138,8 @@
     color: #9a9b9e;
 }
 
+// content section language
+
 .device__settingsLanguageContent {
     display: flex;
     flex-direction: column;
@@ -153,6 +175,8 @@
     text-align: left;
     color: $black;
 }
+
+// section restart
 
 .device__settingsRestart {
     margin-top: 5.6rem;
