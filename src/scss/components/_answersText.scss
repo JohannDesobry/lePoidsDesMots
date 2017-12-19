@@ -1,4 +1,4 @@
-.device__answersText, .device__answersGif, .device__answersEmoji {
+.device__answersGif, .device__answersEmoji {
     position: fixed;
     bottom: 5rem;
     left: 0;
@@ -7,15 +7,22 @@
     border-top: $border-answer;
     background-color: $white;
 }
+.device__answersText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+}
 
 .device__answersBar {
-    position: absolute;
     left: 50%;
     top: 1rem;
-    width: 3.6rem;
-    height: 0.2rem;
-    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    font-size: 14px;
     background-color: $bar;
+    cursor: pointer;
 }
 
 .post:last-child {
@@ -27,7 +34,7 @@
 }
 
 .device__answersText {
-    display: block;
+    display: none;
 }
 
 .device__answersGif {

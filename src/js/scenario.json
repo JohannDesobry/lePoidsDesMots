@@ -58,7 +58,21 @@
 		},
 		{
 			"id": "6",
-			"content": "dernier choix",
+			"content": "premier de trois choix",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+      },
+      "choices": 3,
+      "chapterTarget": 2,
+      "messageTarget": 0
+    },
+    {
+			"id": "7",
+			"content": "deuxième de trois choix",
 			"type": "text",
 			"category": "answer",
 			"date": {
@@ -66,7 +80,21 @@
 				"hour": "18",
 				"min": "13"
 			},
-			"target": "2"
+      "chapterTarget": 1,
+      "messageTarget": 0
+		},
+    {
+			"id": "8",
+			"content": "troisième de trois choix",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 3,
+      "messageTarget": 0
 		}
 	],
 	[{

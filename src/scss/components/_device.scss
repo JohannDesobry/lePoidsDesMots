@@ -38,13 +38,17 @@
     margin: 10px 20px;
 }
 
+.device__answers {
+    position: absolute;
+}
+
 .device__contentTypeAnswerWrapper {
     position: absolute;
     width: 100%;
     height: auto;
     padding: 10px 10px;
     background: rgb(238, 238, 238);
-    bottom: 0;
+    top: 0;
 }
 
 .device__contentTypeAnswerWrapper--messageArea {
