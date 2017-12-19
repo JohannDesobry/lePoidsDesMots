@@ -48,7 +48,7 @@
 			"id": "5",
 			"content": "Je suis un auto msg",
 			"type": "text",
-			"category": "autoAnswer",
+			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "18",
