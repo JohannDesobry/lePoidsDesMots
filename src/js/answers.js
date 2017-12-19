@@ -16,4 +16,4 @@ function displayAnswers()
      }
 }
 
-// displayAnswers()
+displayAnswers()
