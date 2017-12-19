@@ -1,6 +1,6 @@
 .device__answersGif, .device__answersEmoji, .device__answersText {
     position: fixed;
-    bottom: 5rem;
+    bottom: 0rem;
     left: 0;
     width: 100vw;
     height: 0rem;
@@ -34,6 +34,7 @@
 
 .is-active {
     opacity: 1;
+    bottom: 5rem;
     height: auto;
 }
 
