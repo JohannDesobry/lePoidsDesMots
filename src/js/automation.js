@@ -103,34 +103,83 @@ export default class Automation {
       // if app supposed to send another message execute display function again with delay
       if ( this.story[this.i][this.j].category == 'app' ) {
 
-        // Stock the current chapter length
-        //let chapterLength = Object.keys(this.story[this.i]).length
-        //console.log(`${chapterLength} taille current table`)
+        // App message > TEXT
+        if ( this.story[this.i][this.j].type == 'text' ) {
+          // Get the current message to display
+          let messageContent = this.story[this.i][this.j].content
+          console.log(`current message : ${messageContent}`)
 
-        // Get the current message to display
-        let messageContent = this.story[this.i][this.j].content
-        console.log(`current message : ${messageContent}`)
+          // Creates the element to append in device__content
+          let div = document.createElement("DIV")
+          div.classList.add('device__contentAppMessage')
+          div.classList.add('post')
+          let p = document.createElement("P")
+          let text = document.createTextNode(messageContent)
+          p.appendChild(text)
+          let hour = document.createElement("DIV")
+          let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+          hour.appendChild(time)
+          hour.classList.add('hour')
+          div.appendChild(p)
+          div.appendChild(hour)
+          this.deviceContent.appendChild(div)
 
-        // Creates the element to append in device__content
-        let div = document.createElement("DIV")
-        div.classList.add('device__contentAppMessage')
-        div.classList.add('post')
-        let p = document.createElement("P")
-        let text = document.createTextNode(messageContent)
-        p.appendChild(text)
-        let hour = document.createElement("DIV")
-        let time = document.createTextNode(this.story[this.i][this.j].date.hour)
-        hour.appendChild(time)
-        hour.classList.add('hour')
-        div.appendChild(p)
-        div.appendChild(hour)
-        this.deviceContent.appendChild(div)
+          // Set the next message id
+          this.nextMessage = (this.j +=1)
 
-        // Set the next message id
-        this.nextMessage = (this.j +=1)
+          // Scroll window to see last messages if they're hidden
+          scroll()
+        }
 
-        // Scroll window to see last messages if they're hidden
-        scroll()
+        // App message > GIF
+        else if ( this.story[this.i][this.j].type == 'gif' ) {
+          console.log(`type : gif`)
+
+          // Creates the element to append in device__content
+          let div = document.createElement("DIV")
+          div.classList.add('device__contentAppMessage')
+          div.classList.add('post')
+          let img = document.createElement("IMG")
+          img.src = this.story[this.i][this.j].src
+          div.appendChild(img)
+          let hour = document.createElement("DIV")
+          let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+          hour.appendChild(time)
+          hour.classList.add('hour')
+          div.appendChild(hour)
+          this.deviceContent.appendChild(div)
+
+          // Set the next message id
+          this.nextMessage = (this.j +=1)
+
+          // Scroll window to see last messages if they're hidden
+          scroll()
+        }
+
+        // App message > EMOJI
+        else if ( this.story[this.i][this.j].type == 'emoji' ) {
+          console.log(`type : emoji`)
+
+          // Creates the element to append in device__content
+          let div = document.createElement("DIV")
+          div.classList.add('device__contentAppMessage')
+          div.classList.add('post')
+          let img = document.createElement("IMG")
+          img.src = this.story[this.i][this.j].src
+          div.appendChild(img)
+          let hour = document.createElement("DIV")
+          let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+          hour.appendChild(time)
+          hour.classList.add('hour')
+          div.appendChild(hour)
+          this.deviceContent.appendChild(div)
+
+          // Set the next message id
+          this.nextMessage = (this.j +=1)
+
+          // Scroll window to see last messages if they're hidden
+          scroll()
+        }
       }
 
 
@@ -415,9 +464,13 @@ export default class Automation {
 
     function scroll (context) {
       let body = document.body
+      let windowHeight = window.innerHeight
       let scrollValue = body.scrollHeight
-      window.scrollTo(0, scrollValue)
-      console.log(`scrolling : ${scrollValue}`)
+      let scrollDiff = scrollValue - windowHeight
+      if ( scrollValue > windowHeight ) {
+        window.scrollTo(0, (scrollValue+scrollDiff))
+      }
+      console.log(`scrolling : ${scrollDiff}`)
     }
   }
 
