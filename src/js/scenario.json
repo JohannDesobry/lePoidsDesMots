@@ -67,7 +67,7 @@
 				"min": "13"
       },
       "choices": 3,
-      "chapterTarget": 2,
+      "chapterTarget": 1,
       "messageTarget": 0
     },
     {
@@ -100,35 +100,45 @@
 	[{
 			"id": "1",
 			"content": "message one",
-			"type": "text",
-			"category": "app",
+			"type": "smiley",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/astonished-face_1f632.png",
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 0
 		},
 		{
 			"id": "2",
 			"content": "message two",
-			"type": "text",
-			"category": "app",
+			"type": "smiley",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/face-with-rolling-eyes_1f644.png",
+      "chapterTarget": 1,
+      "messageTarget": 0
 		},
 		{
 			"id": "3",
 			"content": "message three",
-			"type": "text",
-			"category": "app",
+			"type": "smiley",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/face-with-tears-of-joy_1f602.png",
+      "chapterTarget": 1,
+      "messageTarget": 0
 		},
 		{
 			"id": "4",

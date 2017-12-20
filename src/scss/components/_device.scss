@@ -17,6 +17,7 @@
     display: block;
     overflow: scroll;
     position: relative;
+    padding-bottom: 50px;
 }
 
 .device__contentAppMessage {
@@ -49,6 +50,9 @@
     padding: 10px 10px;
     background: rgb(238, 238, 238);
     top: 0;
+    &::before {
+        content: ''
+    }
 }
 
 .device__contentTypeAnswerWrapper--messageArea {

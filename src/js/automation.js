@@ -2,6 +2,10 @@
 const answers = document.querySelectorAll('.device__answers div')
 //   lastPost        = document.querySelector('.post:last-child')
 const test = document.querySelector('.device__answersText')
+const emojis = document.querySelector('.device__answersEmoji')
+const textSection = document.querySelector('.device__answersText'),
+       gifSection = document.querySelector('.device__answersGif'),
+     emojiSection = document.querySelector('.device__answersEmoji')
 
 function displayAnswers() 
 {
@@ -18,6 +22,35 @@ function removeAnswers()
     test.classList.remove('is-active')
     let remove = document.querySelector('.device__answersText')
     let nodes = document.querySelectorAll('.device__answersTextInput')
+    for( let i = 0 ; i < nodes.length ; i++ ) {
+      remove.removeChild(nodes[i])
+    }
+  }
+}
+
+function displayAnswersEmoji() 
+{
+     if (!emojiSection.classList.contains('is-active'))
+     {
+        for (let i = 0; i < answers.length; i++)
+        {
+            answers[i].classList.remove('is-active')
+        }
+        emojiSection.classList.add('is-active')
+     }
+     else 
+     {
+        emojiSection.classList.remove('is-active')
+     }
+}
+
+function removeEmojis() 
+{
+	if (emojis.classList.contains('is-active'))
+  {
+    emojis.classList.remove('is-active')
+    let remove = document.querySelector('.device__answersEmoji')
+    let nodes = document.querySelectorAll('.device__answersEmojiInput')
     for( let i = 0 ; i < nodes.length ; i++ ) {
       remove.removeChild(nodes[i])
     }
@@ -122,9 +155,9 @@ export default class Automation {
       // }
 
 
-      // Displays a choices beetween multiple messages to append them on click in device
-      else if ( this.story[this.i][this.j].choices ) {
-
+      // Displays choices beetween multiple messages to append them on click in device
+      else if ( this.story[this.i][this.j].choices && this.story[this.i][this.j].category == "answer" && this.story[this.i][this.j].type == "text" ) {
+      
         displayAnswers()
 
         console.log(`I am the first`)
@@ -134,7 +167,6 @@ export default class Automation {
         let textAnswers = document.querySelector('.device__answersText')
         let x = this.story[this.i][this.j].choices
         console.log(x)
-        //let index = 0
 
         for( let i = 0 ; i < x ; i++ ){
           console.log(`this is choice : ${i}`)
@@ -153,16 +185,6 @@ export default class Automation {
           this.nextChapter = this.story[this.i][this.j+i].chapterTarget
           this.nextMessage = this.story[this.i][this.j+i].messageTarget
           
-          // // Get target of message to display on click
-          // let target = this.story[this.i][this.j].target
-
-          // let callback = 'waw'
-          // console.log(callback)
-          // callback.addEventListener('click', () => {
-          //   console.log('change chapter')
-          //   // this.i += 1
-          //   // this.displayAppMessages(0)
-          // })
           textAnswers.appendChild(div)
 
           let _this = this
@@ -174,14 +196,12 @@ export default class Automation {
             console.log('change chapter')
             console.log(a)
             console.log(b)
-            console.log(currentChapter)
-            console.log(currentMessage)
+            //console.log(currentChapter)
+            //console.log(currentMessage)
 
             // Stock current context
             let _this = this
-            
 
-            //displayAnswers()
             // Creates the element to append in device__content
             let message = document.createElement("DIV")
             message.classList.add('device__contentAnswerMessage')
@@ -191,30 +211,85 @@ export default class Automation {
             message.appendChild(p)
             this.deviceContent.appendChild(message)
 
-
             removeAnswers()
             this.playState = "play"
             setTimeout(function() {
+              _this.i = a
+              _this.j = b
               _this.displayAppMessages(a,b)
+              console.log(`next message : ${a}-${b}`)
             }, 2000)
 
           })
         }
       }
 
-        // let answers = document.querySelectorAll('.device__answersBar')
-        // console.log(answers)
 
-        // for (let i = 0; i < answers.length; i++) {
-        //   let callback = answers[i]
-        //   callback.addEventListener('click', () => {
-        //     console.log('change chapter')
-        //     // this.i += 1
-        //     // this.displayAppMessages(0)
-        //   })
-        // }
+      // Displays smileys answer
+      else if ( this.story[this.i][this.j].type == "smiley" && this.story[this.i][this.j].category == "answer" ) {
+        console.log(`this is a smiley`)
+        this.playState = "pause"
+        console.log(this.playState)
+        let smileyAnswers = document.querySelector('.device__answersEmoji')
+        let x = this.story[this.i][this.j].choices
 
+        displayAnswersEmoji()
+
+        if( this.story[this.i][this.j].choices == 3 ) {
+          for( let i = 0 ; i < x ; i++ ){
+            let div = document.createElement("DIV")
+            div.classList.add('device__answersEmojiInput')
+            let img = document.createElement("IMG")
+            img.src = this.story[this.i][this.j+i].src
+            div.appendChild(img)
+  
+            // Stock chapter and/or next message to recuperate in callback
+            this.nextChapter = this.story[this.i][this.j+i].chapterTarget
+            this.nextMessage = this.story[this.i][this.j+i].messageTarget
+            
+            smileyAnswers.appendChild(div)
+  
+            let _this = this
+            let a = this.nextChapter
+            let b = this.nextMessage
+            let currentChapter = this.i
+            let currentMessage = this.j+i
+            div.addEventListener('click', () => {
+              console.log('change chapter')
+              console.log(a)
+              console.log(b)
+              //console.log(currentChapter)
+              //console.log(currentMessage)
+  
+              // Stock current context
+              let _this = this
+  
+              // Creates the element to append in device__content
+              let message = document.createElement("DIV")
+              message.classList.add('device__contentAnswerMessage')
+              let img = document.createElement("IMG")
+              img.src = this.story[this.i][this.j+i].src
+              message.appendChild(img)
+              this.deviceContent.appendChild(message)
+
+              // displayAnswersEmoji()
+              removeEmojis()
+              scroll()
+  
+              _this.playState = "play"
+              console.log(_this.playState)
+              // setTimeout(function() {
+              //   _this.i = a
+              //   _this.j = b
+              //   _this.displayAppMessages(a,b)
+              //   console.log(`next message : ${a}-${b}`)
+              // }, 2000)
+  
+            })
+          }
+        }
       }
+
       else {
         console.log("fini")
         let _this = this
@@ -224,29 +299,21 @@ export default class Automation {
           _this.displayAppMessages(_this.j=0)
         }, 1500)
       }
+    }
 
+    // Re-execute display function after a determined delay to display next app message
+    if ( this.playState == "play" ) {
       // Stock context
       let _this = this
 
-      // Re-execute display function after a determined delay to display next app message
-      if ( this.playState == "play" ) {
-        setTimeout(function() {
-          _this.displayAppMessages(_this.nextChapter,_this.nextMessage)
-        }, 1000)
-        //console.log(`j: ${this.j}`)
-      }
-
-
-      // else if ( j = chapterLength ) {
-      //   this.i+=1
-      //   console.log(this.i++)
-      //   // setInterval(function() {
-      //   //   _this.displayAppMessages(j=0)
-      //   // }, 1500)
-      //   this.displayAppMessages(j=0)
-      // }
-      //this.displayAppMessages(j+=1)
-    
+      setTimeout(function() {
+        _this.displayAppMessages(_this.nextChapter,_this.nextMessage)
+        _this.i = _this.nextChapter
+        _this.j = _this.nextMessage
+        console.log( `smiley ; ${_this.nextChapter}` )
+        console.log(_this.j)
+      }, 1000)
+    }
 
     function scroll (context) {
       let body = document.body
@@ -254,51 +321,6 @@ export default class Automation {
       window.scrollTo(0, scrollValue)
       console.log(`scrolling : ${scrollValue}`)
     }
-
   }
 
-  // launchApp() {
-  //   // Get app element to append messages in scenario
-  //   const deviceContent = document.querySelector('.device__content')
-
-  //   // Length of the Json file
-  //   const storyLength = Object.keys(this.story).length
-  //   console.log(`${this.chapters} taille JSon`)
-
-  //   // On page load roam scenario
-  //   window.onload = () => { 
-  //     // Display messages in scenario
-
-  //     // Stock current element
-  //     let _this = this
-  //     let step = 0
-      
-      // setInterval(function(step) {
-      //   if(_this.story[_this.i].category == "Tom") {
-      //     let x = _this.story[step][_this.i].content
-      //     console.log(`${x} yeah baby`)
-      //     let a = document.createElement("DIV")
-      //     a.classList.add('device__contentAppMessage')
-      //     let b = document.createElement("P")
-      //     let c = document.createTextNode(_this.story[_this.i].content)
-      //     b.appendChild(c)
-      //     a.appendChild(b)
-      //     content.appendChild(a) 
-      //     _this.i+=1
-      //   }
-  //       else if (_this.story[_this.i].category == "answer") {
-  //         let x = _this.story[_this.i].content
-  //         console.log(`${x} yeah baby`)
-  //         let a = document.createElement("DIV")
-  //         a.classList.add('device__contentAnswerMessage')
-  //         let b = document.createElement("P")
-  //         let c = document.createTextNode(_this.story[_this.i].content)
-  //         b.appendChild(c)
-  //         a.appendChild(b)
-  //         content.appendChild(a) 
-  //         _this.i+=1
-  //       }
-  //     }, 1500)
-  //   }
-  //
 }
