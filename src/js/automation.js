@@ -35,7 +35,7 @@ function writingApp() {
 
   setTimeout(function() {
     wrapper.parentNode.removeChild(wrapper);
-  }, 2000)
+  }, 500)
 }
 
 function removeAnswers() 
@@ -481,10 +481,21 @@ export default class Automation {
   
               // Creates the element to append in device__content
               let message = document.createElement("DIV")
-              message.classList.add('device__contentAnswerMessage')
+              message.classList.add('device__contentAnswerImage')
               let img = document.createElement("IMG")
               img.src = this.story[this.i][this.j+i].src
               message.appendChild(img)
+              let overlay = document.createElement("DIV")
+              overlay.classList.add('overlay')
+    
+              let full = document.createElement("P")
+    
+              let icon = document.createElement("DIV")
+              icon.classList.add('icon-close')
+              message.appendChild(overlay)
+              message.appendChild(full)
+              message.appendChild(icon)
+
               this.deviceContent.appendChild(message)
 
               // displayAnswersEmoji()
@@ -528,7 +539,7 @@ export default class Automation {
         _this.j = _this.nextMessage
         console.log( `smiley ; ${_this.nextChapter}` )
         console.log(_this.j)
-      }, 3500)
+      }, 1000)
     }
 
     function scroll (context) {
