@@ -350,14 +350,18 @@ export default class Automation {
             let _this = this
 
             // Creates the element to append in device__content
+            let container = document.createElement("DIV")
+            container.classList.add('device__contentRight')
             let message = document.createElement("DIV")
             message.classList.add('device__contentAnswerMessage')
+            message.classList.add('post')
             let p = document.createElement("P")
             let text = document.createTextNode(_this.story[currentChapter][currentMessage].content)
             p.appendChild(text)
             message.appendChild(p)
+            container.appendChild(message)
             
-            this.deviceContent.appendChild(message)
+            this.deviceContent.appendChild(container)
 
             removeAnswers()
             this.playState = "play"
