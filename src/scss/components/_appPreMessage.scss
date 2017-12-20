@@ -1,0 +1,61 @@
+@keyframes circle1 {
+    0% {
+        opacity: 1;
+        transform: scale(.5);
+    }
+    100% {
+        opacity: .3;
+        transform: scale(1);
+    }
+}
+
+.device__contentPreAppMessage {
+    display: block;
+    width: auto;
+    height: 10px;
+    margin: 3.2rem 0 20rem 1.6rem;
+    // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
+    border-radius: 0.5rem;
+}
+.device__contentPreAnswerMessage {
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: 26rem;
+    margin: 20px 0 0 20px;
+    // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
+    border-radius: 0.5rem;
+}
+.device__contentPreAppMessage--circle1 {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 5px;
+    // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    animation: circle1 1s infinite .8s;
+}
+.device__contentPreAppMessage--circle2 {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 5px;
+    // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    animation: circle1 1s infinite .8s;
+}
+.device__contentPreAppMessage--circle3 {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 5px;
+    // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+    animation: circle1 1s infinite .8s;
+}

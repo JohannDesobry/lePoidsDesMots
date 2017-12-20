@@ -15,6 +15,28 @@ function displayAnswers()
   }
 }
 
+function writingApp() {
+  let device = document.querySelector('.device__content')
+  let wrapper = document.createElement("DIV")
+  wrapper.classList.add('device__contentPreAppMessage')
+  let circle1 = document.createElement("DIV")
+  circle1.classList.add('device__contentPreAppMessage--circle1')
+  let circle2 = document.createElement("DIV")
+  circle2.classList.add('device__contentPreAppMessage--circle2')
+  let circle3 = document.createElement("DIV")
+  circle3.classList.add('device__contentPreAppMessage--circle3')
+  wrapper.appendChild(circle1)
+  wrapper.appendChild(circle2)
+  wrapper.appendChild(circle3)
+
+  device.appendChild(wrapper)
+  console.log('wait')
+
+  setTimeout(function() {
+    wrapper.parentNode.removeChild(wrapper);
+  }, 2000)
+}
+
 function removeAnswers() 
 {
 	if (test.classList.contains('is-active'))
@@ -100,11 +122,14 @@ export default class Automation {
   displayAppMessages(currentChapter,currentMessage) {
     if( this.i < this.chapters-1 ) {
 
-      // if app supposed to send another message execute display function again with delay
+      // if app supposed to send a message
       if ( this.story[this.i][this.j].category == 'app' ) {
 
         // App message > TEXT
         if ( this.story[this.i][this.j].type == 'text' ) {
+
+          writingApp()
+
           // Get the current message to display
           let messageContent = this.story[this.i][this.j].content
           console.log(`current message : ${messageContent}`)
@@ -122,13 +147,25 @@ export default class Automation {
           hour.classList.add('hour')
           div.appendChild(p)
           div.appendChild(hour)
-          this.deviceContent.appendChild(div)
 
-          // Set the next message id
-          this.nextMessage = (this.j +=1)
+
+          // this.playState = "pause"
+          let _this = this
+
+          setTimeout(function() {
+            _this.deviceContent.appendChild(div)
+            //console.log(`next message : ${a}-${b}`)
+
+            // Set the next message id
+            //_this.nextMessage = (_this.j +=1)
+            scroll()
+          }, 2005)
+
+          // // Set the next message id
+           this.nextMessage = (this.j +=1)
 
           // Scroll window to see last messages if they're hidden
-          scroll()
+          //scroll()
         }
 
         // App message > GIF
@@ -288,6 +325,7 @@ export default class Automation {
             let text = document.createTextNode(_this.story[currentChapter][currentMessage].content)
             p.appendChild(text)
             message.appendChild(p)
+            
             this.deviceContent.appendChild(message)
 
             removeAnswers()
@@ -459,18 +497,14 @@ export default class Automation {
         _this.j = _this.nextMessage
         console.log( `smiley ; ${_this.nextChapter}` )
         console.log(_this.j)
-      }, 1000)
+      }, 4000)
     }
 
     function scroll (context) {
       let body = document.body
-      let windowHeight = window.innerHeight
+      // let windowHeight = window.innerHeight
       let scrollValue = body.scrollHeight
-      let scrollDiff = scrollValue - windowHeight
-      if ( scrollValue > windowHeight ) {
-        window.scrollTo(0, (scrollValue+scrollDiff))
-      }
-      console.log(`scrolling : ${scrollDiff}`)
+      window.scrollTo(0, scrollValue)
     }
   }
 
