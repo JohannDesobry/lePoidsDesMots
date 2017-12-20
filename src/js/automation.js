@@ -510,6 +510,17 @@ export default class Automation {
               hour.appendChild(time)
               hour.classList.add('hour')
               message.appendChild(img)
+              let overlay = document.createElement("DIV")
+              overlay.classList.add('overlay')
+    
+              let full = document.createElement("P")
+    
+              let icon = document.createElement("DIV")
+              icon.classList.add('icon-close')
+              message.appendChild(overlay)
+              message.appendChild(full)
+              message.appendChild(icon)
+
               this.deviceContent.appendChild(message)
 
               // displayAnswersEmoji()
