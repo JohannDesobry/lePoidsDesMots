@@ -66,11 +66,9 @@ footerText.addEventListener('click', function()
 footerGif.addEventListener('click', function()
 {
     displayAnswersGif()
-    console.log('ok')
 })
 
 footerEmoji.addEventListener('click', function()
 {
     displayAnswersEmoji()
-    console.log('ok')
 })

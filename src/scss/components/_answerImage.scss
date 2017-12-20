@@ -1,0 +1,109 @@
+/** 
+
+    TEMPLATE ANSWERIMAGE
+
+*/
+
+.device__contentAnswerImage {
+    position: relative;
+    width: auto;
+    max-width: 26rem;
+    margin: 3.2rem 1.6rem 0 calc(100% - (26rem));
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover p {
+        opacity: 1;
+    }
+
+    &:hover .overlay{
+        opacity: 0.6;
+    }
+}
+
+.device__contentAnswerImage .icon-close {
+    display: none;
+}
+
+.device__contentAnswerImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.device__contentAnswerImage .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 0.5rem;
+    opacity: 0;
+    will-change: opacity;
+    transition: 0.10s all ease-in-out;
+}
+
+.device__contentAnswerImage .hour {
+    position: absolute;
+    bottom: -2.2rem;
+    right: 0;
+    font-family: $main-font;
+    font-size: 10px;
+    line-height: 2.0;
+    text-align: left;
+    color: $message-hour;
+}
+
+.device__contentAnswerImage p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: $zindex-2;
+    transform: translate(-50%, -50%);
+    font-family: $main-font;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 2.0;
+    text-align: left;
+    color: $white;
+    opacity: 0;
+
+    transition: 0.10s all ease-in-out;
+}
+
+.device__contentAnswerImage.fullScreen p, .device__contentAnswerImage.fullScreen .overlay{
+    display: none;
+}
+
+.device__contentAnswerImage.fullScreen {
+    position: fixed;
+    margin: 0px;
+    max-width: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: $zindex-6;
+    background: #000;
+}
+
+.device__contentAnswerImage.fullScreen img{
+    width: 100%;
+    border-radius: 0px;
+    height: 100%;
+    object-fit:contain;
+}
+
+.device__contentAnswerImage.fullScreen .icon-close {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: $zindex-7;
+    cursor: pointer;
+}

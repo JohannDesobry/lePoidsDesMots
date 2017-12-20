@@ -5,31 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title></title>
+    <title>LePoidsDesMots</title>
     <meta name="description" content="" />
 
     <!-- Links -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
   </head>
 
     body
-        section.device
-            header.device__header
-                include header
-            .device__settings
-                include settings
-            .device__content
-                .device__contentAppMessage.post
-                    p Lorem ipsum dolor orem ipsum dolor  
-                    .hour 10:20
-                .device__contentAppMessage.post
-                    p Lorem ipsum dolor orem ipsum dolor  
-                    .hour 10:20
-            .device__answers
-                include answers
-            footer.device__footer
-                include footer
-        <script src="assets/js/bundle.js"></script>
+        section.home__header
+            include homeHeader
+        section.home__conversation
+            include conversation
+        section.home__presentation
+            include presentation
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>    
+        <script src="assets/js/main.js"></script>
 </html>
