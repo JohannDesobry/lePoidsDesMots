@@ -352,11 +352,16 @@ export default class Automation {
             // Creates the element to append in device__content
             let container = document.createElement("DIV")
             container.classList.add('device__contentRight')
+            container.classList.add('post')
             let message = document.createElement("DIV")
             message.classList.add('device__contentAnswerMessage')
-            message.classList.add('post')
             let p = document.createElement("P")
             let text = document.createTextNode(_this.story[currentChapter][currentMessage].content)
+            let hour = document.createElement("DIV")
+            let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+            message.appendChild(hour)
+            hour.appendChild(time)
+            hour.classList.add('hour')
             p.appendChild(text)
             message.appendChild(p)
             container.appendChild(message)
@@ -417,12 +422,22 @@ export default class Automation {
               let _this = this
   
               // Creates the element to append in device__content
+              let container = document.createElement("DIV")
+              container.classList.add('device__contentRight')
+              container.classList.add('post')
               let message = document.createElement("DIV")
               message.classList.add('device__contentAnswerMessage')
               let img = document.createElement("IMG")
               img.src = this.story[this.i][this.j+i].src
+              let hour = document.createElement("DIV")
+              let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+              message.appendChild(hour)
+              hour.appendChild(time)
+              hour.classList.add('hour')
               message.appendChild(img)
-              this.deviceContent.appendChild(message)
+              container.appendChild(message)
+              this.deviceContent.appendChild(container)
+              
 
               // displayAnswersEmoji()
               removeEmojis()
@@ -485,9 +500,15 @@ export default class Automation {
   
               // Creates the element to append in device__content
               let message = document.createElement("DIV")
-              message.classList.add('device__contentAnswerMessage')
+              message.classList.add('device__contentAnswerImage')
+              message.classList.add('post')
               let img = document.createElement("IMG")
               img.src = this.story[this.i][this.j+i].src
+              let hour = document.createElement("DIV")
+              let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+              message.appendChild(hour)
+              hour.appendChild(time)
+              hour.classList.add('hour')
               message.appendChild(img)
               this.deviceContent.appendChild(message)
 
