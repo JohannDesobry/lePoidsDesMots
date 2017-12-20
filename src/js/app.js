@@ -3,6 +3,8 @@ import * as Scenario from './scenario.json';
 import Automation from './automation';
 import Answers from './answers';
 import Settings from './settings';
+import ImageFullScreen from './imgFullScreen';
+
 
 let test = new Test();
 const scenario = Scenario

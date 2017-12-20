@@ -15,7 +15,9 @@
 
 @import 'components/_appMessage';
 @import 'components/_appPreMessage';
+@import 'components/_appImage';
 @import 'components/_answerMessage';
+@import 'components/_answerImage';
 @import 'components/_answersText';
 
 
@@ -24,4 +26,7 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/settings';
+@import 'layout/homeHeader';
+@import 'layout/conversation';
+@import 'layout/presentation';
 

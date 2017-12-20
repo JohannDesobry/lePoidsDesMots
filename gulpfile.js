@@ -73,6 +73,21 @@ gulp.task('javascript', () =>
     .pipe(browserSync.stream())
 );
 
+gulp.task('javascript2', () =>
+  browserify({
+    entries: config.src + 'js2/home.js',
+    debug: true
+  })
+    .transform(babelify, { presets: ['es2015'] })
+    .on('error', gutil.log)
+    .bundle()
+    .on('error', gutil.log)
+    .pipe(source('main.js'))
+    .pipe(streamify(uglify()))
+    .pipe(gulp.dest(config.dist + 'assets/js'))
+    .pipe(browserSync.stream())
+);
+
 gulp.task('images', () =>
   gulp
     .src(config.src + 'img/**/*')
@@ -101,9 +116,10 @@ gulp.task('watch', () => {
   gulp.watch(config.src + '**/*.pug', ['pug']);
   gulp.watch(config.src + 'scss/**/*.scss', ['sass']);
   gulp.watch(config.src + 'js/*.js', ['javascript']);
+  gulp.watch(config.src + 'js2/*.js', ['javascript2']);
   gulp.watch(config.src + 'img/**/*', ['images']);
   gulp.watch(config.src + 'font/*', ['fonts']);
 });
 
-gulp.task('build', ['pug', 'sass', 'javascript', 'images', 'fonts'], () => {});
+gulp.task('build', ['pug', 'sass', 'javascript','javascript2', 'images', 'fonts'], () => {});
 gulp.task('default', ['build', 'liveserver', 'watch'], () => {});
