@@ -57,6 +57,31 @@ function removeEmojis()
   }
 }
 
+function removeGif() 
+{
+  let remove = document.querySelector('.device__answersGif')
+  let nodes = document.querySelectorAll('.device__answersGifInput')
+  for( let i = 0 ; i < nodes.length ; i++ ) {
+    remove.removeChild(nodes[i])
+  }
+}
+
+function displayAnswersGif() 
+{
+     if (!gifSection.classList.contains('is-active'))
+     {
+        for (let i = 0; i < answers.length; i++)
+        {
+            answers[i].classList.remove('is-active')
+        }
+        gifSection.classList.add('is-active')
+     }
+     else 
+     {
+        gifSection.classList.remove('is-active')
+     }
+}
+
 export default class Automation {
   constructor(story,i,j,currentChapter,currentMessage,nextChapter,nextMessage) {
     this.story = story
@@ -93,7 +118,12 @@ export default class Automation {
         let p = document.createElement("P")
         let text = document.createTextNode(messageContent)
         p.appendChild(text)
+        let hour = document.createElement("DIV")
+        let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+        hour.appendChild(time)
+        hour.classList.add('hour')
         div.appendChild(p)
+        div.appendChild(hour)
         this.deviceContent.appendChild(div)
 
         // Set the next message id
@@ -277,6 +307,74 @@ export default class Automation {
               scroll()
   
               _this.playState = "play"
+              console.log(_this.playState)
+              // setTimeout(function() {
+              //   _this.i = a
+              //   _this.j = b
+              //   _this.displayAppMessages(a,b)
+              //   console.log(`next message : ${a}-${b}`)
+              // }, 2000)
+  
+            })
+          }
+        }
+      }
+
+
+      // Displays GIF answer
+      else if ( this.story[this.i][this.j].type == "gif" && this.story[this.i][this.j].category == "answer" ) {
+        console.log(`this is a GIF`)
+        this.playState = "pause"
+        console.log(this.playState)
+        let gifAnswers = document.querySelector('.device__answersGif')
+        //let x = this.story[this.i][this.j].choices
+
+        displayAnswersGif()
+
+        if( this.story[this.i][this.j].choices) {
+          let x = this.story[this.i][this.j].choices
+          for( let i = 0 ; i < x ; i++ ){
+            let div = document.createElement("DIV")
+            div.classList.add('device__answersGifInput')
+            let img = document.createElement("IMG")
+            img.src = this.story[this.i][this.j+i].src
+            div.appendChild(img)
+  
+            // Stock chapter and/or next message to recuperate in callback
+            this.nextChapter = this.story[this.i][this.j+i].chapterTarget
+            this.nextMessage = this.story[this.i][this.j+i].messageTarget
+            
+            gifAnswers.appendChild(div)
+  
+            let _this = this
+            let a = this.nextChapter
+            let b = this.nextMessage
+            let currentChapter = this.i
+            let currentMessage = this.j+i
+            div.addEventListener('click', () => {
+              console.log('change chapter')
+              console.log(a)
+              console.log(b)
+              //console.log(currentChapter)
+              //console.log(currentMessage)
+  
+              // Stock current context
+              let _this = this
+  
+              // Creates the element to append in device__content
+              let message = document.createElement("DIV")
+              message.classList.add('device__contentAnswerMessage')
+              let img = document.createElement("IMG")
+              img.src = this.story[this.i][this.j+i].src
+              message.appendChild(img)
+              this.deviceContent.appendChild(message)
+
+              // displayAnswersEmoji()
+              displayAnswersGif()
+              removeGif()
+              scroll()
+  
+              _this.playState = "pause"
               console.log(_this.playState)
               // setTimeout(function() {
               //   _this.i = a
