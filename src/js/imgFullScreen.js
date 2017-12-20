@@ -25,6 +25,7 @@ for (let i = 0; i < contentAppImage.length; i++)
 {
     contentAppImage[i].addEventListener('click', function()
     {
+        console.log('çacliquedeouf')
         if (!contentAppImage[i].classList.contains('fullScreen'))
         {
             contentAppImage[i].classList.add('fullScreen')

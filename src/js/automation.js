@@ -2,6 +2,7 @@
 const answers = document.querySelectorAll('.device__answers div')
 //   lastPost        = document.querySelector('.post:last-child')
 const test = document.querySelector('.device__answersText')
+var contentAppImage = document.querySelectorAll('.device__contentAppImage')
 const emojis = document.querySelector('.device__answersEmoji')
 const textSection = document.querySelector('.device__answersText'),
        gifSection = document.querySelector('.device__answersGif'),
@@ -128,6 +129,7 @@ export default class Automation {
         // App message > TEXT
         if ( this.story[this.i][this.j].type == 'text' ) {
 
+          // waiting message animation
           writingApp()
 
           // Get the current message to display
@@ -148,33 +150,32 @@ export default class Automation {
           div.appendChild(p)
           div.appendChild(hour)
 
-
-          // this.playState = "pause"
           let _this = this
 
           setTimeout(function() {
-            _this.deviceContent.appendChild(div)
-            //console.log(`next message : ${a}-${b}`)
 
-            // Set the next message id
-            //_this.nextMessage = (_this.j +=1)
+            _this.deviceContent.appendChild(div)
+
+            // Scroll window to see last messages if they're hidden
             scroll()
+
           }, 2005)
 
-          // // Set the next message id
-           this.nextMessage = (this.j +=1)
+          // Set the next message id
+          this.nextMessage = (this.j +=1)
 
-          // Scroll window to see last messages if they're hidden
-          //scroll()
         }
 
         // App message > GIF
         else if ( this.story[this.i][this.j].type == 'gif' ) {
           console.log(`type : gif`)
 
+          // waiting message animation
+          writingApp()
+
           // Creates the element to append in device__content
           let div = document.createElement("DIV")
-          div.classList.add('device__contentAppMessage')
+          div.classList.add('device__contentAppImage')
           div.classList.add('post')
           let img = document.createElement("IMG")
           img.src = this.story[this.i][this.j].src
@@ -184,19 +185,40 @@ export default class Automation {
           hour.appendChild(time)
           hour.classList.add('hour')
           div.appendChild(hour)
-          this.deviceContent.appendChild(div)
+          let overlay = document.createElement("DIV")
+          overlay.classList.add('overlay')
+
+          let full = document.createElement("P")
+
+          let icon = document.createElement("DIV")
+          icon.classList.add('icon-close')
+          div.appendChild(overlay)
+          div.appendChild(full)
+          div.appendChild(icon)
+
+          let _this = this
+          
+          setTimeout(function() {
+
+            _this.deviceContent.appendChild(div)
+
+            // Scroll window to see last messages if they're hidden
+            scroll()
+
+          }, 2005)
 
           // Set the next message id
           this.nextMessage = (this.j +=1)
 
-          // Scroll window to see last messages if they're hidden
-          scroll()
         }
 
         // App message > EMOJI
         else if ( this.story[this.i][this.j].type == 'emoji' ) {
           console.log(`type : emoji`)
 
+          // waiting message animation
+          writingApp()
+
           // Creates the element to append in device__content
           let div = document.createElement("DIV")
           div.classList.add('device__contentAppMessage')
@@ -209,13 +231,22 @@ export default class Automation {
           hour.appendChild(time)
           hour.classList.add('hour')
           div.appendChild(hour)
-          this.deviceContent.appendChild(div)
+          //this.deviceContent.appendChild(div)
+
+          let _this = this
+          
+          setTimeout(function() {
+
+            _this.deviceContent.appendChild(div)
+
+            // Scroll window to see last messages if they're hidden
+            scroll()
+
+          }, 2005)
 
           // Set the next message id
           this.nextMessage = (this.j +=1)
 
-          // Scroll window to see last messages if they're hidden
-          scroll()
         }
       }
 
@@ -497,7 +528,7 @@ export default class Automation {
         _this.j = _this.nextMessage
         console.log( `smiley ; ${_this.nextChapter}` )
         console.log(_this.j)
-      }, 4000)
+      }, 3500)
     }
 
     function scroll (context) {
