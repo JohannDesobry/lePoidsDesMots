@@ -13,6 +13,6 @@ const scenario = Scenario
 const automation = new Automation(scenario,0,0,0,0,0,0)
 // LaunchApp is the method to execute to start app 
 //automation.launchApp()
-automation.displayAppMessages(0)
+automation.displayAppMessages(0,0)
 
 // Console tests

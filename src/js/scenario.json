@@ -6,31 +6,33 @@
 			"category": "app",
 			"date": {
 				"day": "01",
-				"hour": "18",
+				"hour": "18:20",
 				"min": "13"
 			}
 		},
 		{
 			"id": "2",
 			"content": "deuxième message",
-			"type": "text",
+			"type": "gif",
 			"category": "app",
 			"date": {
 				"day": "01",
-				"hour": "18",
+				"hour": "18:20",
 				"min": "13"
-			}
+			},
+			"src": "https://media.giphy.com/media/NTY1kHmcLsCsg/giphy.gif"
 		},
 		{
 			"id": "3",
 			"content": "troisième message",
-			"type": "text",
+			"type": "emoji",
 			"category": "app",
 			"date": {
 				"day": "01",
-				"hour": "18",
+				"hour": "18:20",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/astonished-face_1f632.png"
 		},
 		{
 			"id": "4",
@@ -39,7 +41,7 @@
 			"category": "app",
 			"date": {
 				"day": "01",
-				"hour": "18",
+				"hour": "18:20",
 				"min": "13"
 			},
 			"target": "2"
@@ -48,7 +50,7 @@
 			"id": "5",
 			"content": "Je suis un auto msg",
 			"type": "text",
-			"category": "autoAnswer",
+			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "18",
@@ -67,7 +69,7 @@
 				"min": "13"
       },
       "choices": 3,
-      "chapterTarget": 2,
+      "chapterTarget": 1,
       "messageTarget": 0
     },
     {
@@ -80,7 +82,8 @@
 				"hour": "18",
 				"min": "13"
 			},
-      "chapterTarget": 1,
+      "choices": 3,
+      "chapterTarget": 2,
       "messageTarget": 0
 		},
     {
@@ -100,35 +103,45 @@
 	[{
 			"id": "1",
 			"content": "message one",
-			"type": "text",
-			"category": "app",
+			"type": "smiley",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/astonished-face_1f632.png",
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 0
 		},
 		{
 			"id": "2",
 			"content": "message two",
-			"type": "text",
-			"category": "app",
+			"type": "smiley",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/face-with-rolling-eyes_1f644.png",
+      "chapterTarget": 1,
+      "messageTarget": 0
 		},
 		{
 			"id": "3",
 			"content": "message three",
-			"type": "text",
-			"category": "app",
+			"type": "smiley",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/face-with-tears-of-joy_1f602.png",
+      "chapterTarget": 1,
+      "messageTarget": 0
 		},
 		{
 			"id": "4",
@@ -170,35 +183,47 @@
   [{
       "id": "1",
       "content": "yaw 1 message",
-      "type": "text",
-      "category": "app",
+      "type": "gif",
+      "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
-      }
+			},
+			"src": "https://media.giphy.com/media/yV5xcSTmtVPBS/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 0
     },
     {
       "id": "2",
       "content": "yaw 2 message",
-      "type": "text",
-      "category": "app",
+      "type": "gif",
+      "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
-      }
+			},
+			"src": "https://media.giphy.com/media/3oxHQlgaA48kAfw2Dm/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 0
     },
     {
       "id": "3",
       "content": "yaw 3 message",
-      "type": "text",
-      "category": "app",
+      "type": "gif",
+      "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
-      }
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 0
     },
     {
       "id": "4",
