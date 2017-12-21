@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+html(lang="en")
+    head
+        meta(charset="utf-8")/
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")/
+        meta(name="viewport" content="width=device-width, initial-scale=1")/
 
-    <title>LePoidsDesMots</title>
-    <meta name="description" content="" />
+        title LePoidsDesMots
+        meta(name="description" content="")/
 
-    <!-- Links -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
-  </head>
+        // Links 
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css")/
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")/
+        link(href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet")/
+        link(href="assets/css/app.min.css" rel="stylesheet" type="text/css")/
+        link(rel="shortcut icon" type="image/png" href="assets/img/favicon.png")/
 
     body
         section.home__header
@@ -23,6 +22,5 @@
             include conversation
         section.home__presentation
             include presentation
-        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>    
-        <script src="assets/js/main.js"></script>
-</html>
+        script(src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js")
+        script(src="assets/js/main.js")

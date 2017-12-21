@@ -104,6 +104,13 @@ gulp.task('fonts', () =>
     .pipe(browserSync.stream())
 );
 
+gulp.task('sound', () =>
+  gulp
+    .src(config.src + 'sounds/**/*')
+    .pipe(gulp.dest(config.dist + 'assets/sounds'))
+    .pipe(browserSync.stream())
+);
+
 gulp.task('pug', () =>
   gulp
     .src(config.src + '*.pug')
@@ -121,5 +128,5 @@ gulp.task('watch', () => {
   gulp.watch(config.src + 'font/*', ['fonts']);
 });
 
-gulp.task('build', ['pug', 'sass', 'javascript','javascript2', 'images', 'fonts'], () => {});
+gulp.task('build', ['pug', 'sass', 'javascript','javascript2', 'images', 'fonts', 'sound'], () => {});
 gulp.task('default', ['build', 'liveserver', 'watch'], () => {});

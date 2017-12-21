@@ -1,8 +1,15 @@
+import Typed from 'typed.js';
+
 // const answerContainer = document.querySelector('.device__answers'),
 const answers = document.querySelectorAll('.device__answers div')
 //   lastPost        = document.querySelector('.post:last-child')
 const test = document.querySelector('.device__answersText')
-var contentAppImage = document.querySelectorAll('.device__contentAppImage')
+const timeHeader = document.querySelector('.device__headerStatus--time p')
+// var contentAppImage = document.querySelectorAll('.device__contentAppImage')
+// const audioNotif = document.querySelector('audio')
+// const player = document.querySelector('.player')
+const notifSound = document.querySelector('.notif')
+
 const emojis = document.querySelector('.device__answersEmoji')
 const textSection = document.querySelector('.device__answersText'),
        gifSection = document.querySelector('.device__answersGif'),
@@ -35,7 +42,7 @@ function writingApp() {
 
   setTimeout(function() {
     wrapper.parentNode.removeChild(wrapper);
-  }, 500)
+  }, 1500)
 }
 
 function removeAnswers() 
@@ -142,7 +149,7 @@ export default class Automation {
           div.classList.add('post')
           let p = document.createElement("P")
           let text = document.createTextNode(messageContent)
-          p.appendChild(text)
+          // p.appendChild(text)
           let hour = document.createElement("DIV")
           let time = document.createTextNode(this.story[this.i][this.j].date.hour)
           hour.appendChild(time)
@@ -155,12 +162,18 @@ export default class Automation {
           setTimeout(function() {
 
             _this.deviceContent.appendChild(div)
-
+            let typed = new Typed(p, {
+              strings: [messageContent],
+              typeSpeed: 20
+            });
             // Scroll window to see last messages if they're hidden
             scroll()
 
-          }, 2005)
+            notifSound.play()
 
+          }, 2005)
+          
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
           // Set the next message id
           this.nextMessage = (this.j +=1)
 
@@ -204,8 +217,10 @@ export default class Automation {
 
             // Scroll window to see last messages if they're hidden
             scroll()
+            notifSound.play()
 
           }, 2005)
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
           // Set the next message id
           this.nextMessage = (this.j +=1)
@@ -241,8 +256,10 @@ export default class Automation {
 
             // Scroll window to see last messages if they're hidden
             scroll()
+            notifSound.play()
 
           }, 2005)
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
           // Set the next message id
           this.nextMessage = (this.j +=1)
@@ -356,24 +373,31 @@ export default class Automation {
             let message = document.createElement("DIV")
             message.classList.add('device__contentAnswerMessage')
             let p = document.createElement("P")
+            let msg = _this.story[currentChapter][currentMessage].content
             let text = document.createTextNode(_this.story[currentChapter][currentMessage].content)
             let hour = document.createElement("DIV")
             let time = document.createTextNode(this.story[this.i][this.j].date.hour)
             message.appendChild(hour)
             hour.appendChild(time)
             hour.classList.add('hour')
-            p.appendChild(text)
+            // p.appendChild(text)
             message.appendChild(p)
             container.appendChild(message)
             
             this.deviceContent.appendChild(container)
-
+            let typed = new Typed(p, {
+              strings: [msg],
+              typeSpeed: 20
+            });
+            timeHeader.innerHTML = this.story[this.i][this.j].date.hour
             removeAnswers()
             this.playState = "play"
             setTimeout(function() {
               _this.i = a
               _this.j = b
               _this.displayAppMessages(a,b)
+              // audioNotif.play()
+              console.log('JOHANN')
               console.log(`next message : ${a}-${b}`)
             }, 2000)
 
@@ -437,6 +461,7 @@ export default class Automation {
               message.appendChild(img)
               container.appendChild(message)
               this.deviceContent.appendChild(container)
+              timeHeader.innerHTML = this.story[this.i][this.j].date.hour
               
 
               // displayAnswersEmoji()
@@ -522,6 +547,7 @@ export default class Automation {
               message.appendChild(icon)
 
               this.deviceContent.appendChild(message)
+              timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
               // displayAnswersEmoji()
               displayAnswersGif()
@@ -549,7 +575,7 @@ export default class Automation {
         this.i++
         setTimeout(function() {
           _this.displayAppMessages(_this.j=0)
-        }, 1500)
+        }, 2500)
       }
     }
 
@@ -564,7 +590,7 @@ export default class Automation {
         _this.j = _this.nextMessage
         console.log( `smiley ; ${_this.nextChapter}` )
         console.log(_this.j)
-      }, 1000)
+      }, 3000)
     }
 
     function scroll (context) {
