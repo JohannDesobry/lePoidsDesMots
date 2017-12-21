@@ -23,6 +23,13 @@
     justify-content: center;
 }
 
+.icon-messenger:before, .icon-call:before, .icon-chatbot:before {
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    transform: translateX(-50%)
+}
+
 .device__solutionBtn--msg, .device__solutionBtn--chat, .device__solutionBtn--call {
     position: relative;
     width: 88px;
