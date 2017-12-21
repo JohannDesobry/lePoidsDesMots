@@ -164,7 +164,8 @@ export default class Automation {
             _this.deviceContent.appendChild(div)
             let typed = new Typed(p, {
               strings: [messageContent],
-              typeSpeed: 20
+              typeSpeed: 20,
+              showCursor: false
             });
             // Scroll window to see last messages if they're hidden
             scroll()
@@ -387,7 +388,8 @@ export default class Automation {
             this.deviceContent.appendChild(container)
             let typed = new Typed(p, {
               strings: [msg],
-              typeSpeed: 20
+              typeSpeed: 20,
+              showCursor: false
             });
             timeHeader.innerHTML = this.story[this.i][this.j].date.hour
             removeAnswers()
