@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="utf-8")/
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")/
+        meta(name="viewport" content="width=device-width, initial-scale=1")/
+
+        title LePoidsDesMots
+        meta(name="description" content="")/
+
+        // Links
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css")/
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")/
+        link(href="assets/css/app.min.css" rel="stylesheet" type="text/css")/
+        link(rel="shortcut icon" type="image/png" href="assets/img/favicon.png")/
+
+    body
+        .displayFlex
+            header.device__header
+                include header
+            .device__results
+                .device__resultsContent
+                    .device__resultsContent--score
+                        h3 Mon score
+                        .device__results--circle
+                            p 100%
+                    .device__resultsContent--case
+                        .device__resultsContent--case-1.cases.wrong
+                            h4 Supprimée du groupe Facebook
+                            p Il ne s’agit pas de cyberharcèlement à proprement parler. Dans cette situation, c’est un cas isolé. Cependant si ce dernier se répète, il peut être considéré comme tel. Si cet acte vient à se répéter, parlez-en à l’administration de votre établissement. Si ce dernier n’est pas la seule chose de ce que vous subissez, vous pouvez en parler de manière anonyme à Net Écoute.
+                        .device__resultsContent--case-2.cases.true
+                            h4 Commentaires avec allusions moqueuses
+                            p Dans ce cas-là, personne n’est clairement pas identifié. Même si la notion de répétition est mentionnée, d’un point de vue juridique rien ne prouve qu’une personne précise est visée. Cependant si la personne en a souffert au point d’avoir bénéficié d’une dispense de cours de plus de dix jours, ce cas peut-être emmené en justice. Cependant, nous vous encourageons fortement à en parler à votre entourage ou encore à la plateforme Net Écoute afin de trouver des solutions.
+                        .device__resultsContent--case-3.cases
+                            h4 Rémi sans ami sur snapchat
+                            p Comme il n’y a pas répétition de cet acte, nous ne pouvons pas le considérer comme du cyberharcèlement. Cependant si la victime est clairement identifiable, la loi informatique entre en jeu et peut lui permettre d’attaquer en justice (données à caractère personnel). Tu peux conseiller à la victime de sauvegarder aussi la photo pour avoir une preuve. Nous vous encourageons à en parler à votre entourage ou encore à la plateforme Net Écoute.
+                        .device__resultsContent--case-4.cases
+                            h4 Le numéro dans les toilettes
+                            p La notion de répétition est claire, il s’agit de harcèlement téléphonique. Le fait de communiquer une information confidentielle à autrui est une atteinte à la vie privée. Nous vous encourageons à contacter vos parents qui pourront faire le nécessaire auprès de votre opérateur téléphonique et éventuellement la police pour porter plainte pour cyberharcèlement et atteinte à la vie privée. Les coupables sont passibles d’un an d’emprisonnement et de 45000€ d’amende.
+                        .device__resultsContent--case-5.cases
+                            h4 Story Instagram
+                            p D’abord, il s’agit ici d’une atteinte aux données à caractère personnel car une photo est publiée sans l’accord de la victime. C’est aussi un cas de cyberharcèlement car le harceleur incite son entourage à l’action au travers de son sondage. 
+                        .device__resultsContent--case-6.cases
+                            h4 Faux compte et insultes
+                            p D’abord, il s’agit ici d’une atteinte aux données à caractère personnel car une photo est publiée sans l’accord de la victime. C’est aussi un cas de cyberharcèlement car le harceleur incite son entourage à l’action au travers de son sondage.
+                        .device__resultsContent--case-7.cases
+                            h4 Vidéo en live
+                            p Dans le cas présent, c’est du cyberharcèlement avec acte agravant, car il s’agit d’happy slapping. Le happy slapping est une pratique consistant à filmer l'agression physique d'une personne à l'aide d'un téléphone portable. Il est possible de directement contacter netecoute.fr pour faire supprimer rapidement et définitivement ce genre de contenu, et de porter plainte via un commissariat de police.
+                        .device__resultsContent--case-8.cases
+                            h4 Menace de mort
+                            p Dans ce cas-là c’est la police qu’il faut prévenir car cette agression dépasse le cadre du cyberharcèlement. Les menaces de mort écrites sont passibles de 3 ans de prison et de 45000 euros d’amende. Nous vous recommandons d’enregistrer les preuves de ces menaces pour appuyer votre plainte.
+                    .device__resultsContent--btn
+                        .content
+                            a(href="results.html") Partager votre histoire
+                            span
+            footer.device__footer
+                include footer
+        script(src="assets/js/ending.js")
