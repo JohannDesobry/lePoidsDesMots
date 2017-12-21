@@ -10,21 +10,6 @@ headerContentBtn.addEventListener('mouseover', function(e)
     span.style.left = relX + "px"
 })
 
-// const soundBox = document.querySelectorAll('.device__settingsAudioContent')
-
-// for (let i = 0; i < soundBox.length; i++)
-// {
-//     soundBox[i].addEventListener('mouseover', function(e)
-//     {
-//         let parentOffset = soundBox[i].getBoundingClientRect(),
-//         relX = e.clientX - parentOffset.left,
-//         relY = e.clientY - parentOffset.top;
-//         let span = document.querySelector('device__settingsAudioContent--vibrator span, device__settingsAudioContent--music span, device__settingsAudioContent--vol span')
-//         span.style.top = relY + "px"
-//         span.style.left = relX + "px"
-//     })
-// }
-
 const volBox = document.querySelector('.device__settingsAudioContent--vol')
 
 volBox.addEventListener('mouseover', function(e)
@@ -57,6 +42,18 @@ vibBox.addEventListener('mouseover', function(e)
     relX = e.clientX - parentOffset.left,
     relY = e.clientY - parentOffset.top;
     let span = document.querySelector('.device__settingsAudioContent--vibrator span')
+    span.style.top = relY + "px"
+    span.style.left = relX + "px"
+})
+
+const reset = document.querySelector('.device__solutionBtn--validate')
+
+reset.addEventListener('mouseover', function(e)
+{
+    let parentOffset = reset.getBoundingClientRect(),
+    relX = e.clientX - parentOffset.left,
+    relY = e.clientY - parentOffset.top;
+    let span = document.querySelector('.device__solutionBtn--validate span')
     span.style.top = relY + "px"
     span.style.left = relX + "px"
 })

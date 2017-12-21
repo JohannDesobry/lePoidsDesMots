@@ -1,24 +1,59 @@
 .device__solution {
-    margin-top: 10rem;
-    width: 100%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .device__solutionContent {
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    max-width: 34rem;
+    justify-content: space-between;
     align-items: center;
-    align-content: stretch;
-    height: 800px;
 }
 
-//
-
-.device__solutionSection:nth-child(1) {
-
+.device__solutionSection4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.device__solutionSection:nth-child(1) p {
+.device__solutionBtn--msg, .device__solutionBtn--chat, .device__solutionBtn--call {
+    position: relative;
+    width: 88px;
+    height: 95px;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0 2px 6px 0 rgba(54, 56, 62, 0.12);
+    cursor: pointer;
+
+    p {
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.25;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.87);
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+.device__solutionBtn--call {
+    margin: 0 1.8rem;
+    @media (max-width: 340px){
+        margin: 0;
+    }
+}
+
+.device__solutionSection1 p, .device__solutionSection3 p, .device__solutionSection5 p{
     font-family: $main-font;
     font-size: 16px;
     line-height: 1.25;
@@ -26,83 +61,66 @@
     color: rgba(0, 0, 0, 0.87);
 }
 
-.device__solutionSection:nth-child(1) span {
-    
-}
+// CTA
 
-//
-
-.device__solutionSection:nth-child(2) {
-
-}
-
-.device__solutionSection:nth-child(2) img {
-
-} 
-
-//
-
-.device__solutionSection:nth-child(3) {
-
-}
-
-.device__solutionSection:nth-child(3) span {
-
-}
-
-.device__solutionSection:nth-child(3) p {
-    font-family: $main-font;
-    font-size: 16px;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.87);
-}
-
-//
-
-.device__solutionSection:nth-child(4) {
-
-}
-
-.device__solutionSection:nth-child(4) .device__solutionBtn--msg, .device__solutionSection:nth-child(4) .device__solutionBtn--call, .device__solutionSection:nth-child(4) .device__solutionBtn--chat {
-    .icon- {
-
-    }
-
-    p {
-
+.device__solutionSection6 .device__solutionBtn--validate {
+    width: 21.8rem;
+    height: 4.8rem;
+    border-radius: 5px;
+    background-color: $main-color;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+    @media (max-width: $lg) {
+        position: static;
     }
 }
 
-//
+.device__solutionSection6 .device__solutionBtn--validate .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
-.device__solutionSection:nth-child(5) {
+    &:hover {
 
-}
-
-.device__solutionSection:nth-child(5) p {
-    font-family: $main-font;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.87);
-}
-
-//
-
-.device__solutionSection:nth-child(6) {
-
-}
-
-.device__solutionSection:nth-child(6) .device__solutionBtn--validate {
-    .content {
-
+        span {
+            width: 425%;
+            height: 862.5px;
+        }
+        
+        a {
+            color: $white;
+        }
     }
 
     span {
-
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        z-index: $zindex-2;
+        background-color: $main-color-darker;
+        -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
+}
 
-    a {
-
-    }
+.device__solutionSection6 a {
+    position: relative;
+    z-index: $zindex-3;
+    width: 100%;
+    padding: 14px 0px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.87);
 }
