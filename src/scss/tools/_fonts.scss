@@ -23,7 +23,7 @@
 .icon-left-arrow:before{content:'\0041';font-size: 25px;background-color: $white;color:$main-color;}
 .icon-network:before{content:'\0042';font-size: 20px;background-color: $white;color:$main-color-darker;-moz-transform: scaleX(-1);/* Gecko */ -o-transform: scaleX(-1);/* Opera */-webkit-transform: scaleX(-1); /* Webkit */transform: scaleX(-1);/* Standard */filter: FlipH;}
 .icon-no-music:before{content:'\0043';font-size: 25px;background-color: rgba(54, 56, 62, 0.5);color:$white;}
-.icon-no-sound:before{content:'\0044';font-size: 33px;margin-top: -4px;background-color: rgba(54, 56, 62, 0.5);color:$white;}
+.icon-no-sound:before{content:'\0044';font-size: 33px;margin-top: -4px;background-color: rgba(54, 56, 62, 0.5);color:$white;-webkit-transition: 0.1s all  ease-in-out;transition: 0.1s all ease-in-out;}
 .icon-no-vibration:before{content:'\0045';font-size: 25px;background-color: rgba(54, 56, 62, 0.5);color:$white;}
 .icon-battery:before{content:'\0046';font-size: 20px;background-color: $white;color:$main-color-darker;}
 .icon-restart:before{content:'\0047';font-size: 25px;background-color: $white;color:$main-color;-webkit-transition: 0.1s all  ease-in-out;transition: 0.1s all ease-in-out;}
@@ -39,4 +39,4 @@
 .icon-united-kingdom:before{content:'\0051';font-size: 25px;background-color: $white;color:$main-color;}
 .icon-france:before{content:'\0052';font-size: 25px;background-color: $white;color:$main-color;}
 .icon-close:before{content:'\0053';font-size: 25px;color:$white;}
-.icon-volume:before{content:'\0054';font-size: 25px;background-color: $white;color:rgba(54,56,62,0.5);}
+.icon-volume:before{content:'\0054';font-size: 25px;background-color: $white;color:rgba(54,56,62,0.5);-webkit-transition: 0.1s all  ease-in-out;transition: 0.1s all ease-in-out;}

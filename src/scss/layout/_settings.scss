@@ -94,6 +94,18 @@
     color: $setting;
 }
 
+// display none when not activated
+
+.device__settings .device__settingsHeader, .device__settings .device__settingsContainer {
+    display: none;
+}
+
+// display block when activated
+
+.device__settings.active .device__settingsHeader, .device__settings.active .device__settingsContainer {
+    display: block;
+}
+
 // bg settings activate 
 
 .device__settings.active {
@@ -123,6 +135,52 @@
     background-color: $white;
     box-shadow: $box-shadow;
     cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+
+        span {
+            width: 425%;
+            height: 862.5px;
+        }
+        
+        p {
+            color: $white;
+        }
+
+        .icon-volume:before{
+            background-color: $main-color-darker;
+            color: $white;
+        }
+        .icon-no-sound:before{
+            color: $main-color-darker;
+            background-color: $white;
+        }
+
+        .icon-no-music:before{
+            color: $main-color-darker;
+            background-color: $white;
+        }
+        
+        .icon-no-vibration:before{
+            color: $main-color-darker;
+            background-color: $white;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        z-index: $zindex-2;
+        background-color: $main-color-darker;
+        -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
 }
 
 .device__settingsAudioContent--music {
@@ -134,12 +192,14 @@
     top: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: $zindex-3;
 }
 
 .device__settingsAudioContent--vol p, .device__settingsAudioContent--music p, .device__settingsAudioContent--vibrator p {
     position: absolute;
     bottom: 1.8rem;
     left: 50%;
+    z-index: $zindex-3;
     transform: translateX(-50%);
     font-family: $main-font;
     font-size: 16px;
