@@ -159,6 +159,10 @@ export default class Automation {
           div.appendChild(p)
           div.appendChild(hour)
 
+          // Stock chapter and/or next message to recuperate in callback
+          this.nextChapter = this.story[this.i][this.j].chapterTarget
+          this.nextMessage = this.story[this.i][this.j].messageTarget
+
           let _this = this
 
           setTimeout(function() {
@@ -176,10 +180,9 @@ export default class Automation {
           }, 1100)
           
           timeHeader.innerHTML = this.story[this.i][this.j].date.hour
-          console.log(`timeHeader : ${timeHeader}`)
-          // Set the next message id
-          this.nextMessage = (this.j +=1)
-          //this.playState = "play"
+          console.log(`app text : yeah`)
+
+          this.playState = "play"
         }
 
         // App message > GIF
@@ -430,11 +433,14 @@ export default class Automation {
             setTimeout(function() {
               _this.i = a
               _this.j = b
+
+              _this.playState = "play"
+
               _this.displayAppMessages(a,b)
               // audioNotif.play()
               console.log('JOHANN')
-              console.log(`next message : ${a}-${b}`)
-              _this.playState = "play"
+              console.log(`next message  choiccces : ${a}-${b}`)
+              //_this.playState = "play"
 
             }, 2000)
 
@@ -448,10 +454,44 @@ export default class Automation {
         // Answer > TEXT
         if ( this.story[this.i][this.j].type == "text" ) {
 
-          console.log("text")
+          console.log("answer text")
+
+          if ( this.story[this.i][this.j].auto == "true" ) {
+            // Creates the element to append in device__content
+            let container = document.createElement("DIV")
+            container.classList.add('device__contentRight')
+            container.classList.add('post')
+            let message = document.createElement("DIV")
+            message.classList.add('device__contentAnswerMessage')
+            let p = document.createElement("P")
+            let msg = this.story[currentChapter][currentMessage].content
+            let text = document.createTextNode(this.story[currentChapter][currentMessage].content)
+            let hour = document.createElement("DIV")
+            let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+            message.appendChild(hour)
+            hour.appendChild(time)
+            hour.classList.add('hour')
+            // p.appendChild(text)
+            message.appendChild(p)
+            container.appendChild(message)
+            
+
+            this.deviceContent.appendChild(container)
+
+            let typed = new Typed(p, {
+              strings: [msg],
+              typeSpeed: 20,
+              showCursor: false
+            });
+            timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+
+            // Stock chapter and/or next message to recuperate in callback
+            this.nextChapter = this.story[this.i][this.j].chapterTarget
+            this.nextMessage = this.story[this.i][this.j].messageTarget
+          }
 
           // text > CHOICES
-          if ( this.story[this.i][this.j].choices ) {
+          else if ( this.story[this.i][this.j].choices ) {
             console.log("choice")
           }
 
@@ -793,11 +833,11 @@ export default class Automation {
       window.scrollTo(0, scrollValue)
     }
 
-    let listAnswers = JSON.stringify(this.story)
-    window.localStorage.setItem(1, listAnswers)
-    let tested = JSON.parse(window.localStorage.getItem(1))
-    console.log(tested)
-    console.log("tested")
+    // let listAnswers = JSON.stringify(this.story)
+    // window.localStorage.setItem(1, listAnswers)
+    // let tested = JSON.parse(window.localStorage.getItem(1))
+    // console.log(tested)
+    // console.log("tested")
   }
 
 }
