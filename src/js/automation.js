@@ -457,6 +457,7 @@ export default class Automation {
           console.log("answer text")
 
           if ( this.story[this.i][this.j].auto == "true" ) {
+
             // Creates the element to append in device__content
             let container = document.createElement("DIV")
             container.classList.add('device__contentRight')
@@ -488,6 +489,7 @@ export default class Automation {
             // Stock chapter and/or next message to recuperate in callback
             this.nextChapter = this.story[this.i][this.j].chapterTarget
             this.nextMessage = this.story[this.i][this.j].messageTarget
+            console.log('last message')
           }
 
           // text > CHOICES

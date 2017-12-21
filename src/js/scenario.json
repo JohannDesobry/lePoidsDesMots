@@ -472,61 +472,66 @@
 				"min": "13"
 			},
 			"auto": "true",
-			"chapterTarget": 0,
+			"chapterTarget": 1,
       "messageTarget": 0
-		}
-		
-
-
-
-		
+		},
+		{
+			"id": "33",
+			"content": "Chapitre 2 : Commentaires avec allusions moqueuses",
+			"type": "text",
+			"category": "transition",
+			"date": "This is the date !"
+		}	
 	],
+
+
 	[{
-			"id": "1",
-			"content": "message one",
-			"type": "smiley",
+			"id": "O",
+			"content": "Hey ! Ça va ?",
+			"type": "text",
 			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
 			},
-			"src": "assets/img/astonished-face_1f632.png",
-			"choices": 3,
+			"auto": "true",
       "chapterTarget": 1,
-      "messageTarget": 3
+      "messageTarget": 1
+		},
+
+
+		{
+			"id": "1",
+			"content": "Ouai ça peut aller !",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 2
 		},
 		{
 			"id": "2",
-			"content": "message two",
-			"type": "smiley",
-			"category": "answer",
+			"content": "Et toi ?",
+			"type": "text",
+			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "18",
 				"min": "13"
 			},
-			"src": "assets/img/face-with-rolling-eyes_1f644.png",
       "chapterTarget": 1,
       "messageTarget": 3
 		},
+
+
 		{
 			"id": "3",
-			"content": "message three",
-			"type": "smiley",
-			"category": "answer",
-			"date": {
-				"day": "01",
-				"hour": "18",
-				"min": "13"
-			},
-			"src": "assets/img/face-with-tears-of-joy_1f602.png",
-      "chapterTarget": 1,
-      "messageTarget": 3
-		},
-		{
-			"id": "4",
-			"content": "premier choix",
+			"content": "-",
 			"type": "gif",
 			"category": "answer",
 			"date": {
@@ -536,12 +541,12 @@
 			},
 			"src": "https://media.giphy.com/media/yV5xcSTmtVPBS/giphy.gif",
 			"choices": 3,
-      "chapterTarget": 0,
-      "messageTarget": 0
+      "chapterTarget": 1,
+      "messageTarget": 6
 		},
 		{
-			"id": "5",
-			"content": "second choix",
+			"id": "4",
+			"content": "-",
 			"type": "gif",
 			"category": "answer",
 			"date": {
@@ -550,12 +555,12 @@
 				"min": "13"
 			},
 			"src": "https://media.giphy.com/media/3oxHQlgaA48kAfw2Dm/giphy.gif",
-      "chapterTarget": 0,
-      "messageTarget": 0
+      "chapterTarget": 1,
+      "messageTarget": 6
 		},
 		{
-			"id": "6",
-			"content": "dernier choix",
+			"id": "5",
+			"content": "-",
 			"type": "gif",
 			"category": "answer",
 			"date": {
@@ -564,9 +569,355 @@
 				"min": "13"
 			},
 			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
-      "chapterTarget": 0,
+      "chapterTarget": 1,
+      "messageTarget": 6
+		},
+		{
+			"id": "6",
+			"content": "Qu’est-ce qui ne va pas ?",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto": "true",
+      "chapterTarget": 1,
+      "messageTarget": 7
+		},
+
+
+		{
+			"id": "7",
+			"content": "Bah en vrai ils n’arrêtent pas ! Là je viens de comprendre qu’ils font allusion à une fille de notre classe dans leurs commentaires sous cette photo de cochon.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 8
+		},
+		{
+			"id": "8",
+			"content": "Regarde",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 9
+		},
+		{
+			"id": "9",
+			"content": "-",
+			"type": "image",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"src": "",
+      "chapterTarget": 1,
+      "messageTarget": 10
+		},
+		{
+			"id": "10",
+			"content": "T’as vu comme ils se moquent ?!",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 11
+		},
+
+
+		{
+			"id": "11",
+			"content": "Ils sont tordus dans ton collège, faudrait leur donner des cours de respect ! *emoji colère",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 14
+		},
+		{
+			"id": "12",
+			"content": "Tranquille ce ne sont que des allusions, tu n’es sure de rien",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"choices": 3,
+      "chapterTarget": 1,
+      "messageTarget": 14
+		},
+		{
+			"id": "13",
+			"content": "C’est du cyberharcèlement.",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 15
+		},
+
+
+		{
+			"id": "14",
+			"content": "Franchement j’aimerais pas être à sa place | Ouai bof quand même...",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 15
+		},
+		{
+			"id": "15",
+			"content": "Surtout que je vois souvent ce genre de choses dans mon fil d’actu.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 16
+		},
+
+
+		{
+			"id": "16",
+			"content": "-",
+			"type": "smiley",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"choices": 3,
+			"src": "https://media.giphy.com/media/3oxHQlgaA48kAfw2Dm/giphy.gif",
+      "chapterTarget": 1,
+      "messageTarget": 19
+		},
+		{
+			"id": "17",
+			"content": "-",
+			"type": "smiley",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 1,
+      "messageTarget": 19
+		},
+		{
+			"id": "18",
+			"content": "-",
+			"type": "smiley",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 1,
+      "messageTarget": 19
+		},
+		{
+			"id": "19",
+			"content": "Aaah ouai dans ce cas c’est tendu.",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto": "true",
+      "chapterTarget": 1,
+      "messageTarget": 20
+		},
+		{
+			"id": "20",
+			"content": "Tu devrais peut-être suggérer à cette fille d’en parler à quelqu’un non ?",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto": "true",
+      "chapterTarget": 1,
+      "messageTarget": 21
+		},
+
+
+		{
+			"id": "21",
+			"content": "Ben à qui veux-tu qu’elle en parle ?",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 22
+		},
+
+
+		{
+			"id": "22",
+			"content": "Au CPE",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"choices": 2,
+      "chapterTarget": 1,
+      "messageTarget": 24
+		},
+		{
+			"id": "23",
+			"content": "À ses parents",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 24
+		},
+		{
+			"id": "24",
+			"content": "Ils sauront quoi faire eux.",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto": "true",
+      "chapterTarget": 1,
+      "messageTarget": 25
+		},
+
+
+		{
+			"id": "25",
+			"content": "Ouais, je vais voir si je la croise dans les jours qui viennent...",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 26
+		},
+		{
+			"id": "26",
+			"content": "Il me reste encore des cours à rattraper, je file :emoji bisous:",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 1,
+      "messageTarget": 27
+		},
+		
+
+		{
+			"id": "27",
+			"content": "Pas de souci ;)",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 1,
+      "messageTarget": 29
+		},
+		{
+			"id": "28",
+			"content": "Courage !",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 1,
+      "messageTarget": 29
+		},
+		{
+			"id": "29",
+			"content": "Bisous :emoji bisous:",
+			"type": "text",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 1,
       "messageTarget": 0
 		}
+
+		
+
   ],
   [{
       "id": "1",
