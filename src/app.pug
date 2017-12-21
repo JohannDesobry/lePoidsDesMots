@@ -15,17 +15,18 @@ html(lang="en")
         link(rel="shortcut icon" type="image/png" href="assets/img/favicon.png")/
 
     body
-        section.device
-            header.device__header
-                include header
-            .device__settings
-                include settings
-            .device__content
-            .device__answers
-                include answers
-            footer.device__footer
-                include footer
-        audio(class="notif")
-            //- source(src="horse.ogg"  type="audio/ogg")
-            source(src="assets/sounds/not-bad.mp3" type="audio/mpeg")
+        .displayFlex
+            section.device
+                header.device__header
+                    include header
+                .device__settings
+                    include settings
+                .device__content
+                .device__answers
+                    include answers
+                footer.device__footer
+                    include footer
+            audio(class="notif")
+                //- source(src="horse.ogg"  type="audio/ogg")
+                source(src="assets/sounds/not-bad.mp3" type="audio/mpeg")
         script(src="assets/js/bundle.js")

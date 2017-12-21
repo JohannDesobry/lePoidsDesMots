@@ -1,35 +1,10 @@
-.device__day {
-    position: fixed;
-    top: 2.4rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: $main-color;
-    z-index: $zindex-7;
+.device__results {
     display: flex;
     justify-content: center;
-    align-items: center;
-    transition: all 0.10s ease-in-out;
-
-    p {
-        font-family: $main-font;
-        font-size: 30px;
-        font-weight: 500;
-        text-align: left;
-        color: rgba(255, 255, 255, 0.87);
-    }
 }
 
-.device__solution {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.device__solutionContent {
-    padding: 10rem 2rem;
+.device__resultsContent {
+    padding: 12rem 2rem;
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -38,64 +13,88 @@
     max-width: 34rem;
     justify-content: space-between;
     align-items: center;
+
+    h3 {
+        font-family: $main-font;
+        font-size: 30px;
+        text-align: center;
+        color: #000000;
+    }
 }
 
-.device__solutionSection4{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.icon-messenger:before, .icon-call:before, .icon-chatbot:before {
-    position: absolute;
-    left: 50%;
-    top: 2rem;
-    transform: translateX(-50%)
-}
-
-.device__solutionBtn--msg, .device__solutionBtn--chat, .device__solutionBtn--call {
+.device__results--circle {
+    margin-top: 1.6rem;
+    margin-bottom: 5.6rem;
     position: relative;
-    width: 88px;
-    height: 95px;
+    width: 136px;
+    height: 136px;
+    border: solid 8px $main-color;
+    border-radius: 400px;
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: $main-font;
+        font-size: 36px;
+        text-align: center;
+        color: #000000;
+    }
+}
+
+.device__resultsContent--case {
+    .wrong {
+        &:before {
+            content: url('../img/wrong.svg');
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    .true {
+        &:before {
+            content: url('../img/true.svg');
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+}
+
+.device__resultsContent--case .cases {
+    position: relative;
+    padding: 16px 8px;
+    width: 95%;
+    margin: auto;
+    height: auto;
     border-radius: 5px;
     background-color: $white;
     box-shadow: 0 2px 6px 0 rgba(54, 56, 62, 0.12);
-    cursor: pointer;
+    margin-bottom: 3.6rem;
+
+    h4 {
+        width: 95%;
+        font-family: $main-font;
+        font-size: 20px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.87);
+        margin-bottom: 2.7rem;
+    }
 
     p {
         font-family: $main-font;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.25;
+        font-size: 14px;
         text-align: left;
         color: rgba(0, 0, 0, 0.87);
-        position: absolute;
-        bottom: 18px;
-        left: 50%;
-        transform: translateX(-50%)
     }
-}
-
-.device__solutionBtn--call {
-    margin: 0 1.8rem;
-    @media (max-width: 340px){
-        margin: 0;
-    }
-}
-
-.device__solutionSection1 p, .device__solutionSection3 p, .device__solutionSection5 p{
-    font-family: $main-font;
-    font-size: 16px;
-    line-height: 1.25;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.87);
 }
 
 // CTA
 
-.device__solutionSection6 .device__solutionBtn--validate {
-    width: 21.8rem;
+.device__resultsContent--btn {
+    width: 28.5rem;
     height: 4.8rem;
     border-radius: 5px;
     background-color: $main-color;
@@ -106,7 +105,7 @@
     }
 }
 
-.device__solutionSection6 .device__solutionBtn--validate .content {
+.device__resultsContent--btn .content {
     position: relative;
     width: 100%;
     height: 100%;
@@ -143,7 +142,7 @@
     }
 }
 
-.device__solutionSection6 a {
+.device__resultsContent--btn a {
     position: relative;
     z-index: $zindex-3;
     width: 100%;
