@@ -1,6 +1,6 @@
 [
 	[{
-			"id": "1",
+			"id": "0",
 			"content": "Hey !",
 			"type": "text",
 			"category": "app",
@@ -13,7 +13,7 @@
       "messageTarget": 1
 		},
 		{
-			"id": "2",
+			"id": "1",
 			"content": "Comment ça va ?",
 			"type": "text",
 			"category": "app",
@@ -42,7 +42,7 @@
       "messageTarget": 4
 		},
 		{
-			"id": "1",
+			"id": "3",
 			"content": "Ça va, mais tu nous manques déjà.",
 			"type": "text",
 			"category": "answer",
@@ -57,10 +57,10 @@
 
 
 		{
-			"id": "X",
+			"id": "4",
 			"content": "Ouais ça va !",
 			"type": "text",
-			"category": "answer",
+			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "18:20",
@@ -70,23 +70,23 @@
       "messageTarget": 6
 		},
 		{
-			"id": "3",
+			"id": "5",
 			"content": "Vous aussi vous me manquez.",
 			"type": "text",
-			"category": "answer",
+			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "20:20",
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 7
+      "messageTarget": 6
 		},
 
 
 		{
-			"id": "4",
-			"content": "Ça va, mais tu nous manques déjà",
+			"id": "6",
+			"content": "Comment s’est passée ta première semaine dans ton nouveau collège ?",
 			"type": "text",
 			"category": "answer",
 			"date": {
@@ -94,73 +94,27 @@
 				"hour": "30:20",
 				"min": "13"
 			},
-			"target": "2",
+			"choices": "2",
 			"chapterTarget": 0,
-      "messageTarget": 1
-		},
-
-
-		{
-			"id": "5",
-			"content": "Ouais ça va !",
-			"type": "text",
-			"category": "app",
-			"date": {
-				"day": "01",
-				"hour": "18:20",
-				"min": "13"
-			},
-			"target": "2",
-			"chapterTarget": 0,
-      "messageTarget": 5
+      "messageTarget": 8
 		},
 		{
-			"id": "6",
-			"content": "Vous aussi vous me manquez",
-			"type": "text",
-			"category": "app",
-			"date": {
-				"day": "01",
-				"hour": "18:30",
-				"min": "13"
-      },
-      "choices": 3,
-      "chapterTarget": 1,
-      "messageTarget": 0
-		},
-		
-
-    {
 			"id": "7",
-			"content": "Comment s’est passée ta première semaine dans ton nouveau collège ?",
+			"content": "L’ambiance est cool dans ton nouveau collège ?",
 			"type": "text",
 			"category": "answer",
 			"date": {
 				"day": "01",
-				"hour": "18:20",
+				"hour": "30:20",
 				"min": "13"
 			},
-      "choices": 2,
-      "chapterTarget": 2,
-      "messageTarget": 0
-		},
-    {
-			"id": "8",
-			"content": "L’ambiance est cool dans ton nouveau collège ? ",
-			"type": "text",
-			"category": "answer",
-			"date": {
-				"day": "01",
-				"hour": "18:40",
-				"min": "13"
-			},
-      "chapterTarget": 3,
-      "messageTarget": 0
+			"chapterTarget": 0,
+      "messageTarget": 8
 		},
 
 
 		{
-			"id": "1",
+			"id": "8",
 			"content": "C’est un peu chelou parfois mais ça va haha.",
 			"type": "text",
 			"category": "app",
@@ -169,13 +123,13 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-      "chapterTarget": 0,
-      "messageTarget": 1
+			"chapterTarget": 0,
+      "messageTarget": 9
 		},
-		
-		
+
+
 		{
-			"id": "1",
+			"id": "9",
 			"content": "-",
 			"type": "smiley",
 			"category": "answer",
@@ -186,10 +140,11 @@
 			},
 			"choices":3,
 			"chapterTarget": 0,
-			"messageTarget": 1
+			"messageTarget": 12,
+			"src":"assets/img/face-with-rolling-eyes_1f644.png"
 		},
 		{
-			"id": "1",
+			"id": "10",
 			"content": "-",
 			"type": "smiley",
 			"category": "answer",
@@ -199,10 +154,11 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+			"messageTarget": 12,
+			"src":"assets/img/face-with-rolling-eyes_1f644.png"
 		},
 		{
-			"id": "1",
+			"id": "11",
 			"content": "-",
 			"type": "smiley",
 			"category": "answer",
@@ -212,26 +168,29 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+			"messageTarget": 12,
+			"src":"assets/img/face-with-rolling-eyes_1f644.png"			
 		},
 
 
 		{
-			"id": "1",
+			"id": "12",
 			"content": "Comment ça ?",
 			"type": "text",
 			"category": "answer",
 			"date": {
 				"day": "01",
-				"hour": "18:20",
+				"hour": "18:30",
 				"min": "13"
 			},
+			"auto": "true",
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 13
 		},
+
 				
 		{
-			"id": "1",
+			"id": "13",
 			"content": "Certaines personnes sont un peu bizarres^^",
 			"type": "text",
 			"category": "app",
@@ -241,10 +200,10 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 14
 		},
 		{
-			"id": "1",
+			"id": "14",
 			"content": "Du genre on a un groupe Facebook de la classe.",
 			"type": "text",
 			"category": "app",
@@ -254,10 +213,10 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 15
 		},
 		{
-			"id": "1",
+			"id": "15",
 			"content": "Et ils s'amusent à supprimer des gens du groupe, comme ça sans raison :Emoji je ne sais pas:",
 			"type": "text",
 			"category": "app",
@@ -267,12 +226,12 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 16
 		},
 
 
 		{
-			"id": "1",
+			"id": "16",
 			"content": "Pourquoi ils font ça ?",
 			"type": "text",
 			"category": "answer",
@@ -281,12 +240,14 @@
 				"hour": "18:20",
 				"min": "13"
 			},
+			"auto": "true",
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 17
 		},
 
+
 		{
-			"id": "1",
+			"id": "17",
 			"content": "Bah je ne sais pas. C’est bizarre tu ne trouves pas ? ",
 			"type": "text",
 			"category": "app",
@@ -296,12 +257,12 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 18
 		},
 
 
 		{
-			"id": "2",
+			"id": "18",
 			"content": "Ça va c’est pour rigoler non ?",
 			"type": "text",
 			"category": "answer",
@@ -312,10 +273,10 @@
 			},
 			"choices": 3,
 			"chapterTarget": 0,
-      "messageTarget": 5
+      "messageTarget": 21
 		},
 		{
-			"id": "1",
+			"id": "19",
 			"content": "Pas sympa !",
 			"type": "text",
 			"category": "answer",
@@ -325,10 +286,10 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 6
+      "messageTarget": 21
 		},
 		{
-			"id": "1",
+			"id": "20",
 			"content": "Ouai, t’es sûre que ce n’est pas du cyber-harcèlement ?",
 			"type": "text",
 			"category": "answer",
@@ -338,12 +299,12 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 6
+      "messageTarget": 22
 		},
 
 
 		{
-			"id": "1",
+			"id": "21",
 			"content": "C’est ce que je me disais",
 			"type": "text",
 			"category": "app",
@@ -353,11 +314,11 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 23
 		},
 		{
-			"id": "2",
-			"content": "D’accord, moi je trouve ça bizarre.",
+			"id": "22",
+			"content": "N’exagère pas non plus.",
 			"type": "text",
 			"category": "app",
 			"date": {
@@ -366,12 +327,12 @@
 				"min": "13"
 			},
 			"chapterTarget": 0,
-      "messageTarget": 2
+      "messageTarget": 23
 		},
 
 
 		{
-			"id": "2",
+			"id": "23",
 			"content": "Ça craint que t’ai encore changé de collège...",
 			"type": "text",
 			"category": "answer",
@@ -382,10 +343,10 @@
 			},
 			"choices": 2,
 			"chapterTarget": 0,
-      "messageTarget": 5
+      "messageTarget": 25
 		},
 		{
-			"id": "1",
+			"id": "24",
 			"content": "T’as de la chance d’avoir changé de collège.",
 			"type": "text",
 			"category": "answer",
@@ -395,12 +356,12 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 6
+      "messageTarget": 25
 		},
 
 
 		{
-			"id": "1",
+			"id": "25",
 			"content": "J’avoue",
 			"type": "text",
 			"category": "app",
@@ -410,10 +371,10 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 26
 		},
 		{
-			"id": "2",
+			"id": "26",
 			"content": "Tu t’en sors comment toi ? ",
 			"type": "text",
 			"category": "app",
@@ -423,12 +384,12 @@
 				"min": "13"
 			},
 			"chapterTarget": 0,
-      "messageTarget": 2
+      "messageTarget": 27
 		},
 
 
 		{
-			"id": "2",
+			"id": "27",
 			"content": "Ça passe.",
 			"type": "text",
 			"category": "answer",
@@ -439,10 +400,10 @@
 			},
 			"choices": 2,
 			"chapterTarget": 0,
-      "messageTarget": 5
+      "messageTarget": 29
 		},
 		{
-			"id": "1",
+			"id": "28",
 			"content": " J’avoue c’est la galère.",
 			"type": "text",
 			"category": "answer",
@@ -452,12 +413,12 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 6
+      "messageTarget": 29
 		},
 
 
 		{
-			"id": "2",
+			"id": "29",
 			"content": "J’arrive plus à suivre en maths mais je kiffe toujours autant les cours de M. Jacot.",
 			"type": "text",
 			"category": "answer",
@@ -466,14 +427,14 @@
 				"hour": "19:20",
 				"min": "13"
 			},
-			"choices": 2,
+			"auto": "true",
 			"chapterTarget": 0,
-      "messageTarget": 5
+      "messageTarget": 30
 		},
 
 
 		{
-			"id": "1",
+			"id": "30",
 			"content": "Tiens bon !",
 			"type": "text",
 			"category": "app",
@@ -483,10 +444,10 @@
 				"min": "13"
 			},
       "chapterTarget": 0,
-      "messageTarget": 1
+      "messageTarget": 31
 		},
 		{
-			"id": "2",
+			"id": "31",
 			"content": "Je te laisse je dois y aller, j’ai beaucoup de cours à rattraper !",
 			"type": "text",
 			"category": "app",
@@ -496,12 +457,12 @@
 				"min": "13"
 			},
 			"chapterTarget": 0,
-      "messageTarget": 2
+      "messageTarget": 32
 		},
 
 
 		{
-			"id": "2",
+			"id": "32",
 			"content": "@+ bisous",
 			"type": "text",
 			"category": "answer",
@@ -510,10 +471,10 @@
 				"hour": "19:20",
 				"min": "13"
 			},
-			"choices": 2,
+			"auto": "true",
 			"chapterTarget": 0,
-      "messageTarget": 5
-		},
+      "messageTarget": 0
+		}
 		
 
 
