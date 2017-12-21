@@ -111,6 +111,13 @@ gulp.task('sound', () =>
     .pipe(browserSync.stream())
 );
 
+gulp.task('video', () =>
+  gulp
+    .src(config.src + 'video/**/*')
+    .pipe(gulp.dest(config.dist + 'assets/video'))
+    .pipe(browserSync.stream())
+);
+
 gulp.task('pug', () =>
   gulp
     .src(config.src + '*.pug')
@@ -126,7 +133,9 @@ gulp.task('watch', () => {
   gulp.watch(config.src + 'js2/*.js', ['javascript2']);
   gulp.watch(config.src + 'img/**/*', ['images']);
   gulp.watch(config.src + 'font/*', ['fonts']);
+  gulp.watch(config.src + 'video/*', ['video']);
+  gulp.watch(config.src + 'sounds/*', ['sound']);
 });
 
-gulp.task('build', ['pug', 'sass', 'javascript','javascript2', 'images', 'fonts', 'sound'], () => {});
+gulp.task('build', ['pug', 'sass', 'javascript','javascript2', 'images', 'fonts', 'sound', 'video'], () => {});
 gulp.task('default', ['build', 'liveserver', 'watch'], () => {});

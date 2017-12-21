@@ -117,7 +117,7 @@
     text-align: left;
     color: $white;
     @media (max-width: $lg) {
-        margin-top: 0rem;
+        margin-top: 10rem;
         position: static;
         width: 289px;
         height: auto;
@@ -208,10 +208,6 @@
 
 .home__headerContent--phone {
     margin-top: 4.4rem;
-    // position: absolute;
-    // top: 36rem;
-    // left: 50%;
-    // transform: translateX(-50%);
     @media (min-width: $lg){
         position: absolute;
         width: 408px;
@@ -223,11 +219,33 @@
 }
 
 .home__headerContent--phone img{
+    position: relative;
+    z-index: $zindex-3;
     @media (min-width: $lg){
         width: 100%;
         height: 100%;
         object-fit: cover;
     } 
+}
+
+.contentVideo {
+    position: relative;
+    width: 210px;
+    height: 445px;
+    @media (min-width: $lg){
+        width: calc(100% - 10px);
+        height: 100%;
+    } 
+}
+
+.contentVideo video {
+    position: absolute;
+    z-index: $zindex-2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /**
