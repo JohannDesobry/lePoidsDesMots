@@ -212,6 +212,17 @@ export default class Automation {
           div.appendChild(full)
           div.appendChild(icon)
 
+          div.addEventListener('click', function() {
+            if (!div.classList.contains('fullScreen'))
+            {
+              div.classList.add('fullScreen')
+            }
+            else 
+            {
+              div.classList.remove('fullScreen')
+            }
+          })
+
           let _this = this
           
           setTimeout(function() {
