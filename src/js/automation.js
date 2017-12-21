@@ -1,8 +1,16 @@
+import Typed from 'typed.js';
+
 // const answerContainer = document.querySelector('.device__answers'),
 const answers = document.querySelectorAll('.device__answers div')
 //   lastPost        = document.querySelector('.post:last-child')
 const test = document.querySelector('.device__answersText')
-var contentAppImage = document.querySelectorAll('.device__contentAppImage')
+const timeHeader = document.querySelector('.device__headerStatus--time p')
+console.log(`timeHeader : ${timeHeader}`)
+// var contentAppImage = document.querySelectorAll('.device__contentAppImage')
+// const audioNotif = document.querySelector('audio')
+// const player = document.querySelector('.player')
+const notifSound = document.querySelector('.notif')
+
 const emojis = document.querySelector('.device__answersEmoji')
 const textSection = document.querySelector('.device__answersText'),
        gifSection = document.querySelector('.device__answersGif'),
@@ -119,6 +127,7 @@ export default class Automation {
     this.playState = "play"
   }
 
+
   // Displays the messages in device
   displayAppMessages(currentChapter,currentMessage) {
     if( this.i < this.chapters-1 ) {
@@ -142,7 +151,7 @@ export default class Automation {
           div.classList.add('post')
           let p = document.createElement("P")
           let text = document.createTextNode(messageContent)
-          p.appendChild(text)
+          // p.appendChild(text)
           let hour = document.createElement("DIV")
           let time = document.createTextNode(this.story[this.i][this.j].date.hour)
           hour.appendChild(time)
@@ -155,12 +164,19 @@ export default class Automation {
           setTimeout(function() {
 
             _this.deviceContent.appendChild(div)
-
+            let typed = new Typed(p, {
+              strings: [messageContent],
+              typeSpeed: 20,
+              showCursor: false
+            });
             // Scroll window to see last messages if they're hidden
             scroll()
+            notifSound.play()
 
           }, 1100)
-
+          
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+          console.log(`timeHeader : ${timeHeader}`)
           // Set the next message id
           this.nextMessage = (this.j +=1)
           //this.playState = "play"
@@ -204,8 +220,10 @@ export default class Automation {
 
             // Scroll window to see last messages if they're hidden
             scroll()
+            notifSound.play()
 
           }, 2005)
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
           // Set the next message id
           this.nextMessage = (this.j +=1)
@@ -241,8 +259,11 @@ export default class Automation {
 
             // Scroll window to see last messages if they're hidden
             scroll()
+            notifSound.play()
 
           }, 2005)
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+          notifSound.play()
 
           // Stock chapter and/or next message to recuperate in callback
           this.nextChapter = this.story[this.i][this.j].chapterTarget
@@ -252,7 +273,7 @@ export default class Automation {
 
         }
 
-        // Answer > IMAGE
+        // App > IMAGE
         else if ( this.story[this.i][this.j].type == "image" ) {
 
           writingApp()
@@ -295,11 +316,17 @@ export default class Automation {
           setTimeout(function() {
 
             _this.deviceContent.appendChild(wrapper)
+            
+
+            console.log(`timeHeader : ${timeHeader}`)
 
             // Scroll window to see last messages if they're hidden
             scroll()
+            notifSound.play()
 
           }, 1100)
+
+          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
           // Stock chapter and/or next message to recuperate in callback
           this.nextChapter = this.story[this.i][this.j].chapterTarget
@@ -308,62 +335,12 @@ export default class Automation {
           console.log(`first image ${this.nextMessage}`)
         
         }
-        // END Answer > IMAGE
+        // END app > message > IMAGE
       }
+      // END app > messages
 
 
-      // // Displays an automatic message
-      // else if ( this.story[this.i][this.j].category == 'autoAnswer' ) {
-
-      //   // Stop messages displaying
-      //   this.playState = "pause"
-
-      //   console.log("auto")
-      //   //document.querySelector('.device__contentTypeAnswerWrapper').classList.remove('displayNone')
-
-      //   // Stock current context
-      //   let _this = this
-        
-      //   // Get element to append message in it
-      //   //let p = document.querySelector('.device__contentTypeAnswerWrapper--messageArea')
-
-      //   // Get the current message to display
-      //   let messageContent = this.story[this.i][this.j].content
-
-      //   // Create text node and append it in device
-      //   let text = document.createTextNode(messageContent)
-      //   p.appendChild(text)
-
-      //   // Stock send button
-      //   let button = document.querySelector('.device__answersTextInput')
-
-      //   button.addEventListener('click', () => {
-      //     removeAnswers()
-      //     // Creates the element to append in device__content
-      //     let div = document.createElement("DIV")
-      //     div.classList.add('device__contentAnswerMessage')
-      //     let p = document.createElement("P")
-      //     let text = document.createTextNode(messageContent)
-      //     p.appendChild(text)
-      //     div.appendChild(p)
-      //     this.deviceContent.appendChild(div)
-
-      //     let deleteType = document.querySelector('.device__contentTypeAnswerWrapper--messageArea')
-      //     deleteType.innerHTML = ""
-      //     document.querySelector('.device__contentTypeAnswerWrapper').classList.add('displayNone')
-      //     this.playState = "play"
-      //     setTimeout(function() {
-      //       _this.displayAppMessages(_this.j+=1)
-      //     }, 2000)
-
-      //   })
-
-      //   // Scroll window to see last messages if they're hidden
-      //   scroll()
-      // }
-
-
-      // Displays choices beetween multiple messages to append them on click in device
+      // user > answer > choices
       else if ( this.story[this.i][this.j].choices && this.story[this.i][this.j].category == "answer" && this.story[this.i][this.j].type == "text" ) {
       
         displayAnswers()
@@ -418,23 +395,33 @@ export default class Automation {
             let message = document.createElement("DIV")
             message.classList.add('device__contentAnswerMessage')
             let p = document.createElement("P")
+            let msg = _this.story[currentChapter][currentMessage].content
             let text = document.createTextNode(_this.story[currentChapter][currentMessage].content)
             let hour = document.createElement("DIV")
             let time = document.createTextNode(_this.story[_this.i][_this.j].date.hour)
             message.appendChild(hour)
             hour.appendChild(time)
             hour.classList.add('hour')
-            p.appendChild(text)
+            // p.appendChild(text)
             message.appendChild(p)
             container.appendChild(message)
             
-            _this.deviceContent.appendChild(container)
+
+            this.deviceContent.appendChild(container)
+            let typed = new Typed(p, {
+              strings: [msg],
+              typeSpeed: 20,
+              showCursor: false
+            });
+            timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
             removeAnswers()
             setTimeout(function() {
               _this.i = a
               _this.j = b
               _this.displayAppMessages(a,b)
+              // audioNotif.play()
+              console.log('JOHANN')
               console.log(`next message : ${a}-${b}`)
               _this.playState = "play"
 
@@ -444,7 +431,7 @@ export default class Automation {
         }
       }
 
-      // Answsers > display
+      // user > ANSWERS
       else if ( this.story[this.i][this.j].category == "answer" ) {
 
         // Answer > TEXT
@@ -456,6 +443,56 @@ export default class Automation {
           if ( this.story[this.i][this.j].choices ) {
             console.log("choice")
           }
+
+        // if( this.story[this.i][this.j].choices == 3 ) {
+        //   for( let i = 0 ; i < x ; i++ ){
+        //     let div = document.createElement("DIV")
+        //     div.classList.add('device__answersEmojiInput')
+        //     let img = document.createElement("IMG")
+        //     img.src = this.story[this.i][this.j+i].src
+        //     div.appendChild(img)
+  
+        //     // Stock chapter and/or next message to recuperate in callback
+        //     this.nextChapter = this.story[this.i][this.j+i].chapterTarget
+        //     this.nextMessage = this.story[this.i][this.j+i].messageTarget
+            
+        //     smileyAnswers.appendChild(div)
+  
+        //     let _this = this
+        //     let a = this.nextChapter
+        //     let b = this.nextMessage
+        //     let currentChapter = this.i
+        //     let currentMessage = this.j+i
+        //     div.addEventListener('click', () => {
+        //       console.log('change chapter')
+        //       console.log(a)
+        //       console.log(b)
+        //       //console.log(currentChapter)
+        //       //console.log(currentMessage)
+  
+        //       // Stock current context
+        //       let _this = this
+  
+        //       // Creates the element to append in device__content
+        //       let container = document.createElement("DIV")
+        //       container.classList.add('device__contentRight')
+        //       container.classList.add('post')
+        //       let message = document.createElement("DIV")
+        //       message.classList.add('device__contentAnswerMessage')
+        //       let img = document.createElement("IMG")
+        //       img.src = this.story[this.i][this.j+i].src
+        //       let hour = document.createElement("DIV")
+        //       let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+        //       message.appendChild(hour)
+        //       hour.appendChild(time)
+        //       hour.classList.add('hour')
+        //       message.appendChild(img)
+        //       container.appendChild(message)
+        //       this.deviceContent.appendChild(container)
+        //       timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+        //     })
+        //   }
+        // }
 
           // text > AUTO
           else if ( this.story[this.i][this.j].auto ) {
@@ -605,6 +642,7 @@ export default class Automation {
                 message.appendChild(icon)
 
                 this.deviceContent.appendChild(message)
+                timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
                 // displayAnswersEmoji()
                 displayAnswersGif()
@@ -622,6 +660,7 @@ export default class Automation {
     
               })
             }
+
           }
         }
         // END Answer > GIF

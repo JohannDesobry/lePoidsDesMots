@@ -52,7 +52,7 @@
 // settings content container
 
 .device__settingsContainer {
-    padding: 1.8rem 2.5rem 5rem 2.5rem;
+    padding: 2.8rem 2.5rem 5rem 2.5rem;
     width: 100%;
 }
 
@@ -60,6 +60,9 @@
 
 .device__settingsAudio--chapo, .device__settingsLanguage--chapo {
     position: relative;
+    @media (min-width: $xs) {
+        text-align: center;
+    }
 }
 
 .device__settingsLanguage--chapo {
@@ -75,7 +78,10 @@
     width: calc(100% - 7.5rem);
     max-width: 23rem;
 	height: 1px;
-	border: solid 1px rgba(54, 56, 62, 0.5);
+    border: solid 1px rgba(54, 56, 62, 0.5);
+    @media (min-width: $xs) {
+        display: none;
+    }
 }
 
 // font title
@@ -86,6 +92,18 @@
     line-height: 1.25;
     text-align: left;
     color: $setting;
+}
+
+// display none when not activated
+
+.device__settings .device__settingsHeader, .device__settings .device__settingsContainer {
+    display: none;
+}
+
+// display block when activated
+
+.device__settings.active .device__settingsHeader, .device__settings.active .device__settingsContainer {
+    display: block;
 }
 
 // bg settings activate 
@@ -101,11 +119,11 @@
 
 // content section audio
 
-.device__settingsAudioContent, .device__settingsLanguageContent {
+.device__settingsAudioContent{
     margin-top: 2.7rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -116,6 +134,57 @@
     border-radius: 5px;
     background-color: $white;
     box-shadow: $box-shadow;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+
+        span {
+            width: 425%;
+            height: 862.5px;
+        }
+        
+        p {
+            color: $white;
+        }
+
+        .icon-volume:before{
+            background-color: $main-color-darker;
+            color: $white;
+        }
+        .icon-no-sound:before{
+            color: $main-color-darker;
+            background-color: $white;
+        }
+
+        .icon-no-music:before{
+            color: $main-color-darker;
+            background-color: $white;
+        }
+        
+        .icon-no-vibration:before{
+            color: $main-color-darker;
+            background-color: $white;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        z-index: $zindex-2;
+        background-color: $main-color-darker;
+        -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
+}
+
+.device__settingsAudioContent--music {
+    margin: 0 2rem 0 2rem;
 }
 
 .device__settingsAudioContent--vol div, .device__settingsAudioContent--music div, .device__settingsAudioContent--vibrator div {
@@ -123,12 +192,14 @@
     top: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: $zindex-3;
 }
 
 .device__settingsAudioContent--vol p, .device__settingsAudioContent--music p, .device__settingsAudioContent--vibrator p {
     position: absolute;
     bottom: 1.8rem;
     left: 50%;
+    z-index: $zindex-3;
     transform: translateX(-50%);
     font-family: $main-font;
     font-size: 16px;
@@ -141,9 +212,11 @@
 // content section language
 
 .device__settingsLanguageContent {
+    margin-top: 2.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
             
 .device__settingsLanguageContent--vol, .device__settingsLanguageContent--music {
@@ -179,7 +252,11 @@
 // section restart
 
 .device__settingsRestart {
-    margin-top: 5.6rem;
+    margin-top: 2.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .device__settingsRestart--btn {
@@ -191,14 +268,48 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.device__settingsRestart--btn div{
-    position: absolute;
-    top: 50%;
-    left: 2.1rem;
-    transform: translateY(-50%);
+.device__settingsRestart--btn .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &:hover {
+
+        span {
+            width: 425%;
+            height: 862.5px;
+        }
+        
+        a {
+            color: $white;
+        }
+
+        .icon-restart:before{
+            color: $main-color-darker;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        z-index: $zindex-2;
+        background-color: $main-color-darker;
+        -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
 }
 
-.device__settingsRestart--btn p{
+.device__settingsRestart--btn a {
     position: absolute;
     top: 50%;
     left: 6rem;
@@ -209,5 +320,18 @@
     line-height: 1.25;
     text-align: left;
     color: $white;
+    z-index: $zindex-3;
+    width: 100%;
+    padding: 14px 0px;
+    color: rgba(255, 255, 255, 0.87);
+
 }
 
+.device__settingsRestart--btn div{
+    position: absolute;
+    top: 50%;
+    // left: 2.1rem;
+    left: 0;
+    z-index: $zindex-3;
+    transform: translateY(-50%);
+}
