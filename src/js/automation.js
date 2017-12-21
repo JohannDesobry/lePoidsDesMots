@@ -513,7 +513,7 @@ export default class Automation {
         }
         // END Answers > TEXT
 
-        // Answer > SMILEY
+        // Answer > EMOJI
         else if ( this.story[this.i][this.j].type == "smiley" ) {
           console.log(`this is a smiley`)
           this.playState = "pause"
@@ -523,7 +523,7 @@ export default class Automation {
   
           displayAnswersEmoji()
   
-          if( this.story[this.i][this.j].choices == 3 ) {
+          if( this.story[this.i][this.j].choices ) {
             for( let i = 0 ; i < x ; i++ ){
               let div = document.createElement("DIV")
               div.classList.add('device__answersEmojiInput')
@@ -531,17 +531,39 @@ export default class Automation {
               img.src = this.story[this.i][this.j+i].src
               div.appendChild(img)
     
+              console.log("putain")
               // Stock chapter and/or next message to recuperate in callback
               this.nextChapter = this.story[this.i][this.j+i].chapterTarget
               this.nextMessage = this.story[this.i][this.j+i].messageTarget
               
               smileyAnswers.appendChild(div)
     
-              let _this = this
               let a = this.nextChapter
               let b = this.nextMessage
               let currentChapter = this.i
               let currentMessage = this.j+i
+
+              
+              // Creates the element to append in device__content
+              let container = document.createElement("DIV")
+              container.classList.add('device__contentRight')
+              container.classList.add('post')
+              let message = document.createElement("DIV")
+              message.classList.add('device__contentAnswerMessage')
+              let image = document.createElement("IMG")
+              image.src = this.story[this.i][this.j+i].src
+              image.classList.add('emoji_msg')
+              let hour = document.createElement("DIV")
+              let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+              message.appendChild(hour)
+              hour.appendChild(time)
+              hour.classList.add('hour')
+              message.appendChild(image)
+              container.appendChild(message)
+
+              // Stock current context
+              let _this = this
+
               div.addEventListener('click', () => {
                 console.log('change chapter')
                 console.log(a)
@@ -549,24 +571,8 @@ export default class Automation {
                 //console.log(currentChapter)
                 //console.log(currentMessage)
     
-                // Stock current context
-                let _this = this
-    
                 // Creates the element to append in device__content
-                let container = document.createElement("DIV")
-                container.classList.add('device__contentRight')
-                container.classList.add('post')
-                let message = document.createElement("DIV")
-                message.classList.add('device__contentAnswerMessage')
-                let img = document.createElement("IMG")
-                img.src = this.story[this.i][this.j+i].src
-                let hour = document.createElement("DIV")
-                let time = document.createTextNode(this.story[this.i][this.j].date.hour)
-                message.appendChild(hour)
-                hour.appendChild(time)
-                hour.classList.add('hour')
-                message.appendChild(img)
-                container.appendChild(message)
+                
                 this.deviceContent.appendChild(container)
                 
   
@@ -576,12 +582,12 @@ export default class Automation {
     
                 _this.playState = "play"
                 console.log(_this.playState)
-                // setTimeout(function() {
-                //   _this.i = a
-                //   _this.j = b
-                //   _this.displayAppMessages(a,b)
-                //   console.log(`next message : ${a}-${b}`)
-                // }, 2000)
+                setTimeout(function() {
+                  _this.i = a
+                  _this.j = b
+                  _this.displayAppMessages(a,b)
+                  console.log(`next message : ${a}-${b}`)
+                }, 2000)
     
               })
             }
@@ -652,6 +658,17 @@ export default class Automation {
                 message.appendChild(full)
                 message.appendChild(icon)
 
+                message.addEventListener('click', function() {
+                  if (!message.classList.contains('fullScreen'))
+                  {
+                    message.classList.add('fullScreen')
+                  }
+                  else 
+                  {
+                    message.classList.remove('fullScreen')
+                  }
+                })
+
                 this.deviceContent.appendChild(message)
                 timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
@@ -660,14 +677,14 @@ export default class Automation {
                 removeGif()
                 scroll()
     
-                _this.playState = "pause"
+                _this.playState = "play"
                 console.log(_this.playState)
-                // setTimeout(function() {
-                //   _this.i = a
-                //   _this.j = b
-                //   _this.displayAppMessages(a,b)
-                //   console.log(`next message : ${a}-${b}`)
-                // }, 2000)
+                setTimeout(function() {
+                  _this.i = a
+                  _this.j = b
+                  _this.displayAppMessages(a,b)
+                  console.log(`next message : ${a}-${b}`)
+                }, 2000)
     
               })
             }
