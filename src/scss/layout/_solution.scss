@@ -1,0 +1,108 @@
+.device__solution {
+    margin-top: 10rem;
+    width: 100%;
+    height: auto;
+}
+
+.device__solutionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+    height: 800px;
+}
+
+//
+
+.device__solutionSection:nth-child(1) {
+
+}
+
+.device__solutionSection:nth-child(1) p {
+    font-family: $main-font;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.device__solutionSection:nth-child(1) span {
+    
+}
+
+//
+
+.device__solutionSection:nth-child(2) {
+
+}
+
+.device__solutionSection:nth-child(2) img {
+
+} 
+
+//
+
+.device__solutionSection:nth-child(3) {
+
+}
+
+.device__solutionSection:nth-child(3) span {
+
+}
+
+.device__solutionSection:nth-child(3) p {
+    font-family: $main-font;
+    font-size: 16px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+//
+
+.device__solutionSection:nth-child(4) {
+
+}
+
+.device__solutionSection:nth-child(4) .device__solutionBtn--msg, .device__solutionSection:nth-child(4) .device__solutionBtn--call, .device__solutionSection:nth-child(4) .device__solutionBtn--chat {
+    .icon- {
+
+    }
+
+    p {
+
+    }
+}
+
+//
+
+.device__solutionSection:nth-child(5) {
+
+}
+
+.device__solutionSection:nth-child(5) p {
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+//
+
+.device__solutionSection:nth-child(6) {
+
+}
+
+.device__solutionSection:nth-child(6) .device__solutionBtn--validate {
+    .content {
+
+    }
+
+    span {
+
+    }
+
+    a {
+
+    }
+}
