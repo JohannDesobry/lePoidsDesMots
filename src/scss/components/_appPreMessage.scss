@@ -1,11 +1,11 @@
 @keyframes circle1 {
     0% {
         opacity: 1;
-        transform: scale(.5);
+        transform: scale(1);
     }
     100% {
         opacity: .3;
-        transform: scale(1);
+        transform: scale(0);
     }
 }
 
@@ -35,7 +35,7 @@
     // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
     border-radius: 50%;
     background-color: rgb(224, 224, 224);
-    animation: circle1 1s infinite .8s;
+    animation: circle1 .4s infinite;
 }
 .device__contentPreAppMessage--circle2 {
     position: relative;
@@ -46,7 +46,7 @@
     // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
     border-radius: 50%;
     background-color: rgb(224, 224, 224);
-    animation: circle1 1s infinite .8s;
+    animation: circle1 .4s infinite .1s;
 }
 .device__contentPreAppMessage--circle3 {
     position: relative;
@@ -57,5 +57,5 @@
     // margin: 3.2rem calc(100% - (26rem)) 0 1.6rem;
     border-radius: 50%;
     background-color: rgb(224, 224, 224);
-    animation: circle1 1s infinite .8s;
+    animation: circle1 .4s infinite .2s;
 }

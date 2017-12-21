@@ -1,54 +1,76 @@
 [
 	[{
 			"id": "1",
-			"content": "premier message",
-			"type": "text",
+			"content": "Hey !",
+			"type": "image",
 			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "18:20",
 				"min": "13"
-			}
+			},
+			"src": "assets/img/bg.jpg",
+      "chapterTarget": 0,
+      "messageTarget": 1
 		},
 		{
 			"id": "2",
-			"content": "deuxième message",
-			"type": "gif",
+			"content": "Comment ça va ?",
+			"type": "text",
 			"category": "app",
 			"date": {
 				"day": "01",
 				"hour": "19:20",
 				"min": "13"
 			},
-			"src": "https://media.giphy.com/media/NTY1kHmcLsCsg/giphy.gif"
+			"chapterTarget": 0,
+      "messageTarget": 2
+		},
+		{
+			"id": "X",
+			"content": "This is a auto message",
+			"type": "image",
+			"category": "answer",
+			"date": {
+				"day": "01",
+				"hour": "18:20",
+				"min": "13"
+			},
+			"src": "assets/img/bg.jpg",
+      "chapterTarget": 0,
+      "messageTarget": 3
 		},
 		{
 			"id": "3",
-			"content": "troisième message",
-			"type": "emoji",
-			"category": "app",
+			"content": "Très bien et toi ?",
+			"type": "image",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "20:20",
 				"min": "13"
 			},
-			"src": "assets/img/astonished-face_1f632.png"
+			"src": "assets/img/bg.jpg",
+      "chapterTarget": 0,
+      "messageTarget": 0
 		},
 		{
 			"id": "4",
-			"content": "quatrième message",
+			"content": "Ça va, mais tu nous manques déjà",
 			"type": "text",
-			"category": "app",
+			"category": "answer",
 			"date": {
 				"day": "01",
 				"hour": "30:20",
 				"min": "13"
 			},
-			"target": "2"
+			"target": "2",
+			"chapterTarget": 0,
+      "messageTarget": 1
 		},
 		{
 			"id": "5",
-			"content": "Je suis un auto msg",
+			"content": "Ouais ça va !",
 			"type": "text",
 			"category": "app",
 			"date": {
@@ -56,11 +78,13 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-			"target": "2"
+			"target": "2",
+			"chapterTarget": 0,
+      "messageTarget": 5
 		},
 		{
 			"id": "6",
-			"content": "premier de trois choix",
+			"content": "Vous aussi vous me manquez",
 			"type": "text",
 			"category": "answer",
 			"date": {
