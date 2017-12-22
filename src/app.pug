@@ -15,19 +15,20 @@ html(lang="en")
         link(rel="shortcut icon" type="image/png" href="assets/img/favicon.png")/
 
     body
-        .displayFlex
-            section.device
-                header.device__header
-                    include header
-                .device__settings
-                    include settings
-                .device__content
-                .device__answers
-                    include answers
-                footer.device__footer
-                    include footer
-            audio(class="notif")
-                source(src="assets/sounds/not-bad.mp3" type="audio/mpeg")
-            audio(class="send")
-                source(src="assets/sounds/sent.ogg"  type="audio/ogg")
+        section.device
+            .device__day
+                p Chapitre 1 : Supprimée du groupe Facebook
+            header.device__header
+                include header
+            .device__settings
+                include settings
+            .device__content
+            .device__answers
+                include answers
+            footer.device__footer
+                include footer
+        audio(class="notif")
+            source(src="assets/sounds/not-bad.mp3" type="audio/mpeg")
+        audio(class="send")
+            source(src="assets/sounds/sent.ogg"  type="audio/ogg")
         script(src="assets/js/bundle.js")

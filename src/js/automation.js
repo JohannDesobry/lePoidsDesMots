@@ -17,6 +17,48 @@ const textSection = document.querySelector('.device__answersText'),
        gifSection = document.querySelector('.device__answersGif'),
      emojiSection = document.querySelector('.device__answersEmoji')
 
+const day = document.querySelector('.device__day')
+
+function removeDay ()
+{
+    setTimeout(() => {
+        day.style.opacity = 0
+    }, 1000);
+
+    setTimeout(() => {
+        day.style.display = 'none'
+    }, 1200);
+}
+
+function addDay ()
+{
+    setTimeout(() => {
+        day.style.opacity = 1
+    }, 1000);
+
+    setTimeout(() => {
+        day.style.display = 'block'
+    }, 1200);
+}
+
+removeDay()
+
+
+const days = document.querySelector('.device__day')
+
+function removeDay ()
+{
+    setTimeout(() => {
+        days.style.opacity = 0
+    }, 1000);
+
+    setTimeout(() => {
+        days.style.display = 'none'
+    }, 1200);
+}
+
+removeDay()
+
 function displayAnswers() 
 {
 	if (!test.classList.contains('is-active'))
