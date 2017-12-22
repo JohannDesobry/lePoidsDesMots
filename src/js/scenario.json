@@ -9,7 +9,7 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-      "chapterTarget": 2,
+      "chapterTarget": 0,
       "messageTarget": 1
 		},
 		{
@@ -1220,7 +1220,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-disapointed-01.png",
 			"choices": 3,
       "chapterTarget": 2,
       "messageTarget": 23
@@ -1235,7 +1235,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-disapointed-02.png",
       "chapterTarget": 2,
       "messageTarget": 23
 		},
@@ -1249,7 +1249,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-disapointed-03.png",
       "chapterTarget": 2,
       "messageTarget": 23
 		},
@@ -1922,7 +1922,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-etonne-01.png",
 			"choices": 3,
       "chapterTarget": 4,
       "messageTarget": 9
@@ -1937,7 +1937,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-etonne-02.png",
       "chapterTarget": 4,
       "messageTarget": 9
 		},
@@ -1951,7 +1951,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-etonne-03.png",
       "chapterTarget": 4,
       "messageTarget": 9
 		},
@@ -2237,7 +2237,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-etonne-01.png",
 			"choices": 3,
       "chapterTarget": 5,
       "messageTarget": 5
@@ -2252,7 +2252,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-etonne-02.png",
       "chapterTarget": 5,
       "messageTarget": 5
 		},
@@ -2266,7 +2266,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-etonne-03.png",
       "chapterTarget": 5,
       "messageTarget": 5
 		},
@@ -2637,7 +2637,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/GIF-ok-01.gif",
 			"choices": 3,
       "chapterTarget": 5,
       "messageTarget": 33
@@ -2652,7 +2652,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/GIF-ok-02.gif",
       "chapterTarget": 5,
       "messageTarget": 33
 		},
@@ -2666,7 +2666,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/GIF-ok-03.gif",
       "chapterTarget": 5,
       "messageTarget": 33
 		},

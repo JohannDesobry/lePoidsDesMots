@@ -875,11 +875,11 @@ export default class Automation {
         const SAMUEL = document.querySelectorAll('.device__contentAnswerMessage')
         console.log(SAMUEL)
 
-        // setTimeout(function() {
+        setTimeout(function() {
 
-        //   document.location.href = 'ending.html';
+          document.location.href = 'ending.html';
 
-        // }, 1500)
+        }, 1500)
 
         this.playState = "pause"
         console.log('CECI EST BIEN LA FIN NON TU NE REVES PAS SAMUEL')
