@@ -9,7 +9,7 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-      "chapterTarget": 4,
+      "chapterTarget": 5,
       "messageTarget": 0
 		},
 		{
@@ -2187,6 +2187,490 @@
 			"category": "transition",
 			"date": "This is the date !",
 			"chapterTarget": 4,
+			"messageTarget": 0
+		}
+
+	],
+	[
+		{
+			"id": "0",
+			"content": "Coucou",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 1
+		},
+		{
+			"id": "1",
+			"content": "Tu vas avoir l’impression que je t’envoie un message à chaque fois qu’il se passe quelque chose dans mon collège. Mais...",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 2
+		},
+
+
+		{
+      "id": "2",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 5,
+      "messageTarget": 5
+		},
+		{
+			"id": "3",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 5,
+      "messageTarget": 5
+		},
+		{
+			"id": "4",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 5,
+      "messageTarget": 5
+		},
+		{
+			"id": "5",
+      "content": "Comment ça ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 6
+		},
+		{
+			"id": "6",
+      "content": "Tu vas bien ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 7
+		},
+
+
+		{
+			"id": "7",
+			"content": "Mouais, ça va...",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 8
+		},
+		{
+			"id": "8",
+			"content": "Je commence à en avoir vraiment marre du bahut… c’est l’enfer !",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 9
+		},
+
+
+		{
+			"id": "9",
+      "content": "Roooh ! Qu’est-ce qu’il s’est passé encore ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":2,
+      "chapterTarget": 5,
+      "messageTarget": 12
+		},
+		{
+			"id": "10",
+      "content": "Ils t’ont embêté toi ??",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 5,
+      "messageTarget": 11
+		},
+
+
+		{
+			"id": "11",
+			"content": "Moi ? Non bien sur que non !",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"auto":"true",
+			"chapterTarget": 5,
+			"messageTarget": 12
+		},
+		{
+			"id": "12",
+			"content": "C’est toujours les mêmes, Julie et son pote Corentin.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 13
+		},
+		{
+			"id": "13",
+			"content": "Ils ont créé un faux compte pour un mec de notre classe et ils s’amusent à insulter plusieurs personnes du collège en se faisant passer pour lui.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 14
+		},
+		{
+			"id": "14",
+			"content": "Ça va beaucoup trop loin…",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 15
+		},
+
+
+		{
+			"id": "15",
+      "content": "C’est carrément du cyber-harcèlement.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices": 3,
+      "chapterTarget": 5,
+      "messageTarget": 18
+		},
+		{
+			"id": "16",
+      "content": "Ils vont trop loin.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 5,
+      "messageTarget": 18
+		},
+		{
+			"id": "17",
+      "content": "Ça vaaa, qui n’a jamais fait ça pour rire ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 5,
+      "messageTarget": 19
+		},
+
+
+		{
+			"id": "18",
+			"content": "Non mais ça devient horrible",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 20
+		},
+		{
+			"id": "19",
+			"content": "Ben moi, et ça ne me fait pas rire.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 20
+		},
+		{
+			"id": "20",
+			"content": "Je lui ai pas encore envoyé un message, mais là il faut directement dénoncer et faire supprimer le compte non ? ",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 21
+		},
+
+
+		{
+			"id": "21",
+      "content": "Tu peux signaler le compte et contacter la police directement.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 22
+		},
+		{
+			"id": "22",
+      "content": "Ils en ont parlé en cours la dernière fois, y’a une police d’internet.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 23
+		},
+		{
+			"id": "23",
+      "content": "Attends j’te cherche le lien",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 24
+		},
+
+
+		{
+			"id": "24",
+			"content": "Ah ouais ce serait cool merci !",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 25
+		},
+		{
+			"id": "25",
+			"content": "Je le filerai à Thomas direct au pire",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 26
+		},
+
+
+		{
+			"id": "26",
+      "content": "Tiens",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 27
+		},
+		{
+			"id": "27",
+      "content": "https://www.service-public.fr/particuliers/vosdroits/F32239",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 28
+		},
+		{
+			"id": "28",
+      "content": "Ça explique comment porter plainte, tu peux lui envoyer ça",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 5,
+      "messageTarget": 29
+		},
+		
+
+		{
+			"id": "29",
+			"content": "Top merci ! Je te dis s’il le fait !",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 5,
+			"messageTarget": 30
+		},
+
+
+		{
+      "id": "30",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 5,
+      "messageTarget": 31
+		},
+		{
+			"id": "31",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 5,
+      "messageTarget": 32
+		},
+		{
+			"id": "32",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 5,
+      "messageTarget": 33
+		},
+
+
+		{
+			"id": "33",
+			"content": "Chapitre 6 : Faux compte et insultes",
+			"type": "text",
+			"category": "transition",
+			"date": "This is the date !",
+			"chapterTarget": 5,
 			"messageTarget": 0
 		}
 
