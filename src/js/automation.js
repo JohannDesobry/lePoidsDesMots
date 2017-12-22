@@ -606,10 +606,6 @@ export default class Automation {
               container.classList.add('post')
               let message = document.createElement("DIV")
               message.classList.add('device__contentAnswerMessage')
-              if (this.story[this.i][this.j].correct)
-              {
-                message.classList.add('correct')
-              }
               let image = document.createElement("IMG")
               image.src = this.story[this.i][this.j+i].src
               image.classList.add('emoji_msg')
@@ -671,33 +667,28 @@ export default class Automation {
               this.nextMessage = this.story[this.i][this.j+i].messageTarget
               
               gifAnswers.appendChild(div)
-    
               let _this = this
               let a = this.nextChapter
               let b = this.nextMessage
               let currentChapter = this.i
               let currentMessage = this.j+i
+
+
               div.addEventListener('click', () => {
-    
-                // Stock current context
-                let _this = this
+                
     
                 // Creates the element to append in device__content
                 let message = document.createElement("DIV")
                 message.classList.add('device__contentAnswerImage')
                 message.classList.add('post')
-                if (this.story[this.i][this.j].correct)
-                {
-                  message.classList.add('correct')
-                }
-                let img = document.createElement("IMG")
-                img.src = this.story[this.i][this.j+i].src
+                let image = document.createElement("IMG")
+                image.src = _this.story[_this.i][_this.j+i].src
                 let hour = document.createElement("DIV")
-                let time = document.createTextNode(this.story[this.i][this.j].date.hour)
+                let time = document.createTextNode(_this.story[_this.i][_this.j].date.hour)
                 message.appendChild(hour)
                 hour.appendChild(time)
                 hour.classList.add('hour')
-                message.appendChild(img)
+                message.appendChild(image)
                 let overlay = document.createElement("DIV")
                 overlay.classList.add('overlay')
       
@@ -824,9 +815,22 @@ export default class Automation {
         addDay()
         removeDay2()
 
+
+        let allCorrects = document.querySelectorAll('.correct')
+        let finalScore = 0
+        for ( let i = 0 ; i < allCorrects.length ; i++) {
+          finalScore += 1
+        }
+        //let lastname = localStorage.getItem("1")
+  
+
+        localStorage.setItem("1", finalScore)
+        let lastname = localStorage.getItem("1")
+
         dayP.innerHTML = this.story[this.i][this.j].content
 
         const SAMUEL = document.querySelectorAll('.device__contentAnswerMessage')
+
 
         setTimeout(function() {
 

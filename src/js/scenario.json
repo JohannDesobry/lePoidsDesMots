@@ -9,8 +9,8 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-      "chapterTarget": 0,
-      "messageTarget": 1
+      "chapterTarget": 5,
+      "messageTarget": 29
 		},
 		{
 			"id": "1",
@@ -533,7 +533,7 @@
 		{
 			"id": "3",
 			"content": "-",
-			"type": "gif",
+			"type": "smiley",
 			"category": "answer",
 			"date": {
 				"day": "01",
@@ -548,7 +548,7 @@
 		{
 			"id": "4",
 			"content": "-",
-			"type": "gif",
+			"type": "smiley",
 			"category": "answer",
 			"date": {
 				"day": "01",
@@ -562,7 +562,7 @@
 		{
 			"id": "5",
 			"content": "-",
-			"type": "gif",
+			"type": "smiley",
 			"category": "answer",
 			"date": {
 				"day": "01",
@@ -958,14 +958,14 @@
     {
       "id": "2",
       "content": "-",
-      "type": "gif",
+      "type": "smiley",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
       },
-			"src": "assets/img/GIF-choque-01.gif",
+			"src": "assets/img/gif-choque-01.gif",
 			"choices": 3,
       "chapterTarget": 2,
       "messageTarget": 5
@@ -973,28 +973,28 @@
 		{
       "id": "3",
       "content": "-",
-      "type": "gif",
+      "type": "smiley",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
       },
-			"src": "assets/img/GIF-choque-02.gif",
+			"src": "assets/img/gif-choque-02.gif",
       "chapterTarget": 2,
       "messageTarget": 5
 		},
 		{
       "id": "4",
       "content": "-",
-      "type": "gif",
+      "type": "smiley",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
       },
-			"src": "assets/img/GIF-choque-03.gif",
+			"src": "assets/img/gif-choque-03.gif",
       "chapterTarget": 2,
       "messageTarget": 5
     },
@@ -2630,14 +2630,14 @@
 		{
       "id": "30",
       "content": "-",
-      "type": "gif",
+      "type": "smiley",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
       },
-			"src": "assets/img/GIF-ok-01.gif",
+			"src": "assets/img/gif-ok-01.gif",
 			"choices": 3,
       "chapterTarget": 5,
       "messageTarget": 33
@@ -2645,28 +2645,28 @@
 		{
 			"id": "31",
       "content": "-",
-      "type": "gif",
+      "type": "smiley",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
       },
-			"src": "assets/img/GIF-ok-02.gif",
+			"src": "assets/img/gif-ok-02.gif",
       "chapterTarget": 5,
       "messageTarget": 33
 		},
 		{
 			"id": "32",
       "content": "-",
-      "type": "gif",
+      "type": "smiley",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
       },
-			"src": "assets/img/GIF-ok-03.gif",
+			"src": "assets/img/gif-ok-03.gif",
       "chapterTarget": 5,
       "messageTarget": 33
 		},
