@@ -10,7 +10,7 @@
 				"min": "13"
 			},
       "chapterTarget": 5,
-      "messageTarget": 0
+      "messageTarget": 14
 		},
 		{
 			"id": "1",
@@ -280,6 +280,7 @@
 			"content": "Pas sympa !",
 			"type": "text",
 			"category": "answer",
+			"correct": "true",
 			"date": {
 				"day": "01",
 				"hour": "18:30",
@@ -472,15 +473,17 @@
 				"min": "13"
 			},
 			"auto": "true",
-			"chapterTarget": 1,
-      "messageTarget": 0
+			"chapterTarget": 0,
+      "messageTarget": 33
 		},
 		{
 			"id": "33",
 			"content": "Chapitre 2 : Commentaires avec allusions moqueuses",
 			"type": "text",
 			"category": "transition",
-			"date": "This is the date !"
+			"date": "This is the date !",
+			"chapterTarget": 1,
+      "messageTarget": 0
 		}	
 	],
 	[{
@@ -657,9 +660,10 @@
 		},
 		{
 			"id": "12",
-			"content": "Tranquille ce ne sont que des allusions, tu n’es sure de rien",
+			"content": "Tranquille ce ne sont que des allusions, tu n’es sûre de rien",
 			"type": "text",
 			"category": "answer",
+			"correct": "true",
 			"date": {
 				"day": "01",
 				"hour": "18",
@@ -911,10 +915,10 @@
 			},
 			"auto":"true",
       "chapterTarget": 1,
-      "messageTarget": 0
+      "messageTarget": 30
 		},
 		{
-			"id": "33",
+			"id": "30",
 			"content": "Chapitre 3 : Rémi sans ami sur Snapchat",
 			"type": "text",
 			"category": "transition",
@@ -1139,7 +1143,8 @@
       "id": "15",
       "content": "C’est lourd mais c’est pas grave.",
       "type": "text",
-      "category": "answer",
+			"category": "answer",
+			"correct": "true",
       "date": {
         "day": "01",
         "hour": "18",
@@ -1575,6 +1580,7 @@
 		"content": "C’est carrément du cyber-harcèlement.",
 		"type": "text",
 		"category": "answer",
+		"correct": "true",
 		"date": {
 			"day": "01",
 			"hour": "18",
@@ -1819,7 +1825,7 @@
 		"type": "text",
 		"category": "transition",
 		"date": "This is the date !",
-		"chapterTarget": 3,
+		"chapterTarget": 4,
 		"messageTarget": 0
 	}],
 	[{
@@ -2010,7 +2016,8 @@
 		},
 		{
       "id": "13",
-      "content": "C’est lourd et même pas marrant.",
+			"content": "C’est lourd et même pas marrant.",
+			"correct": "true",
       "type": "text",
       "category": "answer",
       "date": {
@@ -2186,7 +2193,7 @@
 			"type": "text",
 			"category": "transition",
 			"date": "This is the date !",
-			"chapterTarget": 4,
+			"chapterTarget": 5,
 			"messageTarget": 0
 		}
 
@@ -2409,7 +2416,8 @@
 			"id": "15",
       "content": "C’est carrément du cyber-harcèlement.",
       "type": "text",
-      "category": "answer",
+			"category": "answer",
+			"correct": "true",
       "date": {
         "day": "01",
         "hour": "18",
@@ -2632,7 +2640,7 @@
 			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
 			"choices": 3,
       "chapterTarget": 5,
-      "messageTarget": 31
+      "messageTarget": 33
 		},
 		{
 			"id": "31",
@@ -2646,7 +2654,7 @@
       },
 			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
       "chapterTarget": 5,
-      "messageTarget": 32
+      "messageTarget": 33
 		},
 		{
 			"id": "32",
@@ -2668,10 +2676,8 @@
 			"id": "33",
 			"content": "Chapitre 6 : Faux compte et insultes",
 			"type": "text",
-			"category": "transition",
-			"date": "This is the date !",
-			"chapterTarget": 5,
-			"messageTarget": 0
+			"category": "end",
+			"date": "This is the date !"
 		}
 
 	]

@@ -17,6 +17,45 @@ const textSection = document.querySelector('.device__answersText'),
        gifSection = document.querySelector('.device__answersGif'),
      emojiSection = document.querySelector('.device__answersEmoji')
 
+
+const day = document.querySelector('.device__day')
+const dayP = document.querySelector('.device__day p')
+
+function removeDay ()
+{
+    setTimeout(() => {
+        day.style.opacity = 0
+    }, 1000);
+
+    setTimeout(() => {
+        day.style.display = 'none'
+    }, 1200);
+}
+
+function removeDay2 ()
+{
+    setTimeout(() => {
+        day.style.opacity = 0
+    }, 1500);
+
+    setTimeout(() => {
+        day.style.display = 'none'
+    }, 1700);
+}
+
+function addDay ()
+{
+    setTimeout(() => {
+        day.style.opacity = 1
+    }, 100);
+
+    setTimeout(() => {
+        day.style.display = 'flex'
+    }, 200);
+}
+
+removeDay()
+
 function displayAnswers() 
 {
 	if (!test.classList.contains('is-active'))
@@ -420,9 +459,12 @@ export default class Automation {
             // p.appendChild(text)
             message.appendChild(p)
             container.appendChild(message)
-            
             sentSound.play()
-
+            if (_this.story[_this.i][_this.j].correct)
+            {
+              console.log('MOMOOMOMO')
+              container.classList.add('correct')
+            }
             this.deviceContent.appendChild(container)
             let typed = new Typed(p, {
               strings: [msg],
@@ -596,6 +638,10 @@ export default class Automation {
               container.classList.add('post')
               let message = document.createElement("DIV")
               message.classList.add('device__contentAnswerMessage')
+              if (this.story[this.i][this.j].correct)
+              {
+                message.classList.add('correct')
+              }
               let image = document.createElement("IMG")
               image.src = this.story[this.i][this.j+i].src
               image.classList.add('emoji_msg')
@@ -685,6 +731,10 @@ export default class Automation {
                 let message = document.createElement("DIV")
                 message.classList.add('device__contentAnswerImage')
                 message.classList.add('post')
+                if (this.story[this.i][this.j].correct)
+                {
+                  message.classList.add('correct')
+                }
                 let img = document.createElement("IMG")
                 img.src = this.story[this.i][this.j+i].src
                 let hour = document.createElement("DIV")
@@ -801,7 +851,41 @@ export default class Automation {
       }
       // END Answers display 
 
+      else if ( this.story[this.i][this.j].category == "transition" )
+      {
 
+        addDay()
+        removeDay2()
+
+        dayP.innerHTML = this.story[this.i][this.j].content
+
+        // Stock chapter and/or next message to recuperate in callback
+        this.nextChapter = this.story[this.i][this.j].chapterTarget
+        this.nextMessage = this.story[this.i][this.j].messageTarget
+
+      }
+
+      else if ( this.story[this.i][this.j].category == "end" )
+      {
+
+        addDay()
+        removeDay2()
+
+        dayP.innerHTML = this.story[this.i][this.j].content
+
+        const SAMUEL = document.querySelectorAll('.device__contentAnswerMessage')
+        console.log(SAMUEL)
+
+        // setTimeout(function() {
+
+        //   document.location.href = 'ending.html';
+
+        // }, 1500)
+
+        this.playState = "pause"
+        console.log('CECI EST BIEN LA FIN NON TU NE REVES PAS SAMUEL')
+
+      }
       
       // else {
       //   console.log("fini")

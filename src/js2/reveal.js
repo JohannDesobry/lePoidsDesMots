@@ -10,7 +10,7 @@ window.sr = ScrollReveal({ reset:false, viewFactor  : 0.4,
 sr.reveal('.home__headerContent--intro',{
 origin: 'bottom',
 distance: '10rem',
-duration: 450,
+duration: 450,  
 });
 
 sr.reveal('.home__headerContent--phone',{
@@ -35,6 +35,26 @@ duration: 900,
 
 sr.reveal('.home__conversationPicture',{
 origin: 'right',
+distance: '20rem',
+duration: 900,
+});
+
+// Sensibilisation
+
+sr.reveal('.home__sensibilisationContent--title, .home__sensibilisationContent--title2',{
+origin: 'left',
+distance: '20rem',
+duration: 450,
+});
+
+sr.reveal('.home__sensibilisationContent--stats',{
+origin: 'bottom',
+distance: '20rem',
+duration: 450,
+});
+
+sr.reveal('.home__sensibilisationContainer div',{
+origin: 'bottom',
 distance: '20rem',
 duration: 900,
 });
