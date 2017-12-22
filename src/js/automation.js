@@ -4,8 +4,8 @@ import Typed from 'typed.js';
 const answers = document.querySelectorAll('.device__answers div')
 //   lastPost        = document.querySelector('.post:last-child')
 const test = document.querySelector('.device__answersText')
-const timeHeader = document.querySelector('.device__headerStatus--time p')
-console.log(`timeHeader : ${timeHeader}`)
+// const timeHeader = document.querySelector('.device__headerStatus--time p')
+// console.log(`timeHeader : ${timeHeader}`)
 // var contentAppImage = document.querySelectorAll('.device__contentAppImage')
 // const audioNotif = document.querySelector('audio')
 // const player = document.querySelector('.player')
@@ -180,7 +180,7 @@ export default class Automation {
 
           }, 1100)
           
-          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+          // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
           console.log(`app text : yeah`)
 
           this.playState = "play"
@@ -238,7 +238,7 @@ export default class Automation {
             notifSound.play()
 
           }, 2005)
-          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+          // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
           // Set the next message id
           this.nextMessage = (this.j +=1)
@@ -277,7 +277,7 @@ export default class Automation {
             notifSound.play()
 
           }, 2005)
-          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+          // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
           notifSound.play()
 
           // Stock chapter and/or next message to recuperate in callback
@@ -333,7 +333,7 @@ export default class Automation {
             _this.deviceContent.appendChild(wrapper)
             
 
-            console.log(`timeHeader : ${timeHeader}`)
+            // console.log(`timeHeader : ${timeHeader}`)
 
             // Scroll window to see last messages if they're hidden
             scroll()
@@ -341,7 +341,7 @@ export default class Automation {
 
           }, 1100)
 
-          timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+          // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
           // Stock chapter and/or next message to recuperate in callback
           this.nextChapter = this.story[this.i][this.j].chapterTarget
@@ -429,7 +429,7 @@ export default class Automation {
               typeSpeed: 10,
               showCursor: false
             });
-            timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+            // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
             removeAnswers()
             setTimeout(function() {
@@ -488,7 +488,7 @@ export default class Automation {
               typeSpeed: 10,
               showCursor: false
             });
-            timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+            // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
             // Stock chapter and/or next message to recuperate in callback
             this.nextChapter = this.story[this.i][this.j].chapterTarget
@@ -717,7 +717,7 @@ export default class Automation {
 
                 this.deviceContent.appendChild(message)
                 sentSound.play()
-                timeHeader.innerHTML = this.story[this.i][this.j].date.hour
+                // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
                 // displayAnswersEmoji()
                 displayAnswersGif()

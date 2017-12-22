@@ -260,12 +260,15 @@
 }
 
 .device__settingsRestart--btn {
-    position: relative;
     width: 31.1rem;
     height: 4.8rem;
     border-radius: 5px;
     background-color: $main-color;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+    @media (max-width: $lg) {
+        position: static;
+    }
 }
 
 .device__settingsRestart--btn .content {
@@ -288,10 +291,6 @@
         a {
             color: $white;
         }
-
-        .icon-restart:before{
-            color: $main-color-darker;
-        }
     }
 
     span {
@@ -310,28 +309,14 @@
 }
 
 .device__settingsRestart--btn a {
-    position: absolute;
-    top: 50%;
-    left: 6rem;
-    transform: translateY(-50%);
+    position: relative;
+    z-index: $zindex-3;
+    width: 100%;
+    padding: 14px 0px;
     font-family: $main-font;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25;
-    text-align: left;
-    color: $white;
-    z-index: $zindex-3;
-    width: 100%;
-    padding: 14px 0px;
+    text-align: center;
     color: rgba(255, 255, 255, 0.87);
-
-}
-
-.device__settingsRestart--btn div{
-    position: absolute;
-    top: 50%;
-    // left: 2.1rem;
-    left: 0;
-    z-index: $zindex-3;
-    transform: translateY(-50%);
 }
