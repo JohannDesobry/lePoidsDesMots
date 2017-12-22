@@ -617,7 +617,7 @@
 		},
 		{
 			"id": "9",
-			"content": "-",
+			"content": "assets/img/screen2.png",
 			"type": "image",
 			"category": "app",
 			"date": {
@@ -1495,7 +1495,7 @@
 	},
 	{
 		"id": "1",
-		"content": "-",
+		"content": "assets/img/screen1.jpg",
 		"type": "image",
 		"category": "app",
 		"date": {
