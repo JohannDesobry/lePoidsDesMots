@@ -9,8 +9,8 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-      "chapterTarget": 0,
-      "messageTarget": 1
+      "chapterTarget": 4,
+      "messageTarget": 0
 		},
 		{
 			"id": "1",
@@ -483,8 +483,6 @@
 			"date": "This is the date !"
 		}	
 	],
-
-
 	[{
 			"id": "O",
 			"content": "Hey ! Ça va ?",
@@ -914,44 +912,48 @@
 			"auto":"true",
       "chapterTarget": 1,
       "messageTarget": 0
-		}
-
-		
-
+		},
+		{
+			"id": "33",
+			"content": "Chapitre 3 : Rémi sans ami sur Snapchat",
+			"type": "text",
+			"category": "transition",
+			"date": "This is the date !",
+      "chapterTarget": 2,
+      "messageTarget": 0
+		}	
   ],
   [{
+			"id": "0",
+			"content": "Hey ! Encore un truc trop chaud qui vient de se passer !",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 1
+		},
+    {
       "id": "1",
-      "content": "yaw 1 message",
-      "type": "gif",
-      "category": "answer",
+      "content": "C’est dingue ce collège ! ",
+      "type": "text",
+      "category": "app",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
 			},
-			"src": "https://media.giphy.com/media/yV5xcSTmtVPBS/giphy.gif",
-			"choices": 3,
-      "chapterTarget": 1,
-      "messageTarget": 0
-    },
+      "chapterTarget": 2,
+      "messageTarget": 2
+		},
+		
+
     {
       "id": "2",
-      "content": "yaw 2 message",
-      "type": "gif",
-      "category": "answer",
-      "date": {
-        "day": "01",
-        "hour": "18",
-        "min": "13"
-			},
-			"src": "https://media.giphy.com/media/3oxHQlgaA48kAfw2Dm/giphy.gif",
-			"choices": 3,
-      "chapterTarget": 1,
-      "messageTarget": 0
-    },
-    {
-      "id": "3",
-      "content": "yaw 3 message",
+      "content": "-",
       "type": "gif",
       "category": "answer",
       "date": {
@@ -961,12 +963,56 @@
       },
 			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
 			"choices": 3,
-      "chapterTarget": 1,
-      "messageTarget": 0
+      "chapterTarget": 2,
+      "messageTarget": 5
+		},
+		{
+      "id": "3",
+      "content": "-",
+      "type": "gif",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 2,
+      "messageTarget": 5
+		},
+		{
+      "id": "4",
+      "content": "-",
+      "type": "gif",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 2,
+      "messageTarget": 5
     },
     {
-      "id": "4",
-      "content": "yaw message 4",
+      "id": "5",
+      "content": "C’est tendu en fait ton bahut.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 2,
+      "messageTarget": 6
+		},
+		
+
+    {
+      "id": "6",
+      "content": "Bah en gros :",
       "type": "text",
       "category": "app",
       "date": {
@@ -974,81 +1020,826 @@
         "hour": "18",
         "min": "13"
       },
-      "target": "2"
+      "chapterTarget": 2,
+      "messageTarget": 7
     },
     {
-      "id": "5",
-      "content": "second choix",
+      "id": "7",
+      "content": "Il y a un mec, Rémi, je ne sais pas si je t’en ai déjà parlé, il se fait un peu victimiser... ",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+      "chapterTarget": 2,
+      "messageTarget": 8
+		},
+		{
+      "id": "8",
+      "content": "Julie, qui a l’air d’être une petite peste, vient de poster un snap dans sa story,",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+      "chapterTarget": 2,
+      "messageTarget": 9
+		},
+		{
+      "id": "9",
+      "content": "avec Rémi dessus, en train de manger tout seul, elle a écrit “#bolossetsolo” en description.",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+      "chapterTarget": 2,
+      "messageTarget": 10
+		},
+
+
+		{
+      "id": "10",
+      "content": "Pas sympa.",
       "type": "text",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
-      },
-      "target": "2"
-    },
-    {
-      "id": "6",
-      "content": "dernier choix",
+			},
+			"choices":3,
+      "chapterTarget": 2,
+      "messageTarget": 13
+		},
+		{
+      "id": "11",
+      "content": "Et ?",
       "type": "text",
       "category": "answer",
       "date": {
         "day": "01",
         "hour": "18",
         "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 13
+		},
+		{
+      "id": "12",
+      "content": "Elle est drôle cette Julie.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 13
+		},
+
+		
+		{
+      "id": "13",
+      "content": "Le pire c’est que j’ai entendu tout à l’heure que la photo avait été enregistré 12 fois !",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 14
+		},
+		
+
+		{
+      "id": "14",
+      "content": "Je trouve ça un peu limite, c’est pas considéré comme du cyber-harcèlement ça ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":3,
+      "chapterTarget": 2,
+      "messageTarget": 18
+		},
+		{
+      "id": "15",
+      "content": "C’est lourd mais c’est pas grave.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 19
+		},
+		{
+      "id": "16",
+      "content": "Ça va c’est marrant je trouve !",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 19
+		},
+
+		{
+      "id": "17",
+      "content": "Oui tu as raison !",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 19
+		},
+
+
+		{
+      "id": "18",
+      "content": "Je ne vois pas quoi faire pour l’aider.",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 20
+		},
+		{
+      "id": "19",
+      "content": "Mais c’est chaud quand même",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 20
+		},
+
+
+		{
+      "id": "20",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
       },
-      "target": "2"
-    }
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 2,
+      "messageTarget": 23
+		},
+		{
+			"id": "21",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 2,
+      "messageTarget": 23
+		},
+		{
+      "id": "22",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 2,
+      "messageTarget": 23
+		},
+		
+
+		{
+      "id": "23",
+      "content": "Tu peux pas trop l’aider en plus.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 2,
+      "messageTarget": 24
+		},
+		{
+      "id": "24",
+      "content": "À moins d’être pote avec un “sans amis”",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 2,
+      "messageTarget": 25
+		},
+
+
+		{
+      "id": "25",
+      "content": "Bah il me fait un peu de peine Rémi.",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 26
+		},
+		{
+      "id": "26",
+      "content": "J’aimerais bien l’aider.",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 27
+		},
+
+
+		{
+      "id": "27",
+      "content": "Tu peux aller voir le CPE.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":2,
+      "chapterTarget": 2,
+      "messageTarget": 29
+		},
+		{
+      "id": "28",
+      "content": "Parles en à ta prof principale ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 29
+		},
+
+		{
+      "id": "29",
+      "content": "Tu crois ?!",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 30
+		},
+		{
+      "id": "30",
+      "content": "Je vais d’abord lui envoyer un message sur facebook !",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 31
+		},
+		{
+      "id": "31",
+      "content": "Et toi comment tu vas ? Tu arrives mieux à suivre en maths ?",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 32
+		},
+
+
+		{
+      "id": "32",
+      "content": "Non pas vraiment.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":2,
+      "chapterTarget": 2,
+      "messageTarget": 34
+		},
+		{
+      "id": "33",
+      "content": "Oui, mes parents m’ont offert des cours particuliers",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 34
+		},
+
+		{
+      "id": "34",
+      "content": "Accroche-toi ! Il n’y a que ça à faire ;)",
+      "type": "text",
+      "category": "app",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 2,
+      "messageTarget": 35
+		},
+
+
+		{
+      "id": "35",
+      "content": "Oui tu as raison.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 2,
+      "messageTarget": 36
+		},
+		{
+      "id": "36",
+      "content": "Je dois te laisser, bon courage pour Rémi :)",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 2,
+      "messageTarget": 37
+		},
+		{
+      "id": "37",
+      "content": "Bisous",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 2,
+      "messageTarget": 38
+		},
+
+
+		{
+			"id": "38",
+			"content": "Chapitre 4 : Le numéro dans les toilettes",
+			"type": "text",
+			"category": "transition",
+			"date": "This is the date !",
+      "chapterTarget": 3,
+      "messageTarget": 0
+		}
+
   ],
   [{
+		"id": "0",
+		"content": "Regarde",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 1
+	},
+	{
+		"id": "1",
+		"content": "-",
+		"type": "image",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"src":"",
+		"chapterTarget": 3,
+		"messageTarget": 2
+	},
+	{
+		"id": "2",
+		"content": "C’est le numéro de Coralie.",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 3
+	},
+	{
+		"id": "3",
+		"content": "Tout le monde l’appelle, genre depuis hier plus de 35 appels !",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 4
+	},
+
+	{
+		"id": "4",
+		"content": "Ah ouais, c’est marrant il finit comme le tien !",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"auto": "true",
+		"chapterTarget": 3,
+		"messageTarget": 5
+	},
+	{
+		"id": "5",
+		"content": "Elle n’a qu’à l’effacer et on en parle plus hein",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"choices":3,
+		"chapterTarget": 3,
+		"messageTarget": 8
+	},
+	{
+		"id": "6",
+		"content": "Il y a vraiment des gamins dans ton collège.. c’est grave.",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 8
+	},
+	{
+		"id": "7",
+		"content": "C’est carrément du cyber-harcèlement.",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 10
+	},
+	{
+		"id": "8",
+		"content": "Ce n’est quand même pas normal ! Faut qu’elle en parle.",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 10
+	},
+	{
+		"id": "9",
+		"content": "Oui je pense même qu’elle devrait en parler.",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 10
+	},
+	{
+		"id": "10",
+		"content": "Mais à qui ? ",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 11
+	},
+	{
+		"id": "11",
+		"content": "Je pense qu’elle devrait en parler à ses parents, elle se sentirait moins seule déjà et ils pourraient s’occuper de couper sa ligne téléphonique.",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"auto":"true",
+		"chapterTarget": 3,
+		"messageTarget": 12
+	},
+	{
+		"id": "12",
+		"content": "Mais elle peut aussi prendre contact avec…",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"auto":"true",
+		"chapterTarget": 3,
+		"messageTarget": 13
+	},
+
+
+	{
+		"id": "13",
+		"content": "Votre CPE, c’est la personne idéale : elle est censée être à l’écoute de ses élèves et elle pourra même faire remonter l’information si besoin.",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"choices":2,
+		"chapterTarget": 3,
+		"messageTarget": 15
+	},
+	{
+		"id": "14",
+		"content": "Votre directeur/trice, pas de doute il faut aller droit au but.",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 15
+	},
+
+
+	{
+		"id": "15",
+		"content": "Je vais lui dire :)",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 16
+	},
+
+
+	{
+		"id": "16",
+		"content": "Yes !",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"auto":"true",
+		"chapterTarget": 3,
+		"messageTarget": 17
+	},
+	
+
+	{
+		"id": "17",
+		"content": "Faut que je te laisse.",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"choices":2,
+		"chapterTarget": 3,
+		"messageTarget": 19
+	},
+	{
+		"id": "18",
+		"content": "Oh j’ai oublié de te dire !",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 20
+	},
+
+
+	{
+		"id": "19",
+		"content": "Bisous à bientôt",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 21
+	},
+	{
+		"id": "20",
+		"content": "Quoi ?",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 21
+	},
+
+
+	{
+		"id": "21",
+		"content": "Prends soin de toi",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"choices":2,
+		"chapterTarget": 3,
+		"messageTarget": 25
+	},
+	{
+		"id": "22",
+		"content": "J’ai croisé Adrien ton amour de primaire il y a 3-4 jours, il m’a demandé de tes nouvelles et m’a dit de te passer le bonjour :) donc je transmets. ",
+		"type": "text",
+		"category": "answer",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 23
+	},
+
+
+	{
+		"id": "23",
+		"content": "Oh c’est gentil de sa part ! Merci à toi ;)",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 3,
+		"messageTarget": 24
+	},
+
+
+	{
+		"id": "24",
+		"content": "Chapitre 5 : Story instagram",
+		"type": "text",
+		"category": "transition",
+		"date": "This is the date !",
+		"chapterTarget": 3,
+		"messageTarget": 0
+	}],
+	[{
+			"id": "0",
+			"content": "Je viens de voter pour une story…",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 1
+		},
+
+
+		{
       "id": "1",
-      "content": "oom b1 message",
-      "type": "text",
-      "category": "app",
-      "date": {
-        "day": "01",
-        "hour": "18",
-        "min": "13"
-      }
-    },
-    {
-      "id": "2",
-      "content": "oom b2 message",
-      "type": "text",
-      "category": "app",
-      "date": {
-        "day": "01",
-        "hour": "18",
-        "min": "13"
-      }
-    },
-    {
-      "id": "3",
-      "content": "oom b3 message",
-      "type": "text",
-      "category": "app",
-      "date": {
-        "day": "01",
-        "hour": "18",
-        "min": "13"
-      }
-    },
-    {
-      "id": "4",
-      "content": "oom b4 message 4",
-      "type": "text",
-      "category": "app",
-      "date": {
-        "day": "01",
-        "hour": "18",
-        "min": "13"
-      },
-      "target": "2"
-    },
-    {
-      "id": "5",
-      "content": "second choix",
+      "content": "Ah ouai ?!",
       "type": "text",
       "category": "answer",
       "date": {
@@ -1056,11 +1847,112 @@
         "hour": "18",
         "min": "13"
       },
-      "target": "2"
-    },
-    {
+			"choices": 2,
+      "chapterTarget": 4,
+      "messageTarget": 3
+		},
+		{
+			"id": "2",
+      "content": "Et alors ?",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+      "chapterTarget": 4,
+      "messageTarget": 3
+		},
+
+
+		{
+		"id": "3",
+		"content": "Sauf que c’est Julie (la peste, je t’en ai déjà parlé) qui avait mis une photo de Coraline, une meuf un peu bizarre de ma classe mais assez gentille et il fallait voter pour sa beauté.",
+		"type": "text",
+		"category": "app",
+		"date": {
+			"day": "01",
+			"hour": "18",
+			"min": "13"
+		},
+		"chapterTarget": 4,
+		"messageTarget": 4
+		},
+		{
+			"id": "4",
+			"content": "En vrai je ne suis pas fière d’avoir voté...",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 5
+		},
+		{
+			"id": "5",
+			"content": "Mais 90 % des gens ont voté “moche” :(",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 6
+		},
+
+		{
       "id": "6",
-      "content": "dernier choix",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"choices": 3,
+      "chapterTarget": 4,
+      "messageTarget": 9
+		},
+		{
+			"id": "7",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 4,
+      "messageTarget": 9
+		},
+		{
+			"id": "8",
+      "content": "-",
+      "type": "smiley",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+      "chapterTarget": 4,
+      "messageTarget": 9
+		},
+
+		{
+      "id": "9",
+      "content": "Tu as voté quoi toi ?!",
       "type": "text",
       "category": "answer",
       "date": {
@@ -1068,7 +1960,235 @@
         "hour": "18",
         "min": "13"
       },
-      "target": "2"
-    }
-  ]
+			"auto": "true",
+      "chapterTarget": 4,
+      "messageTarget": 10
+		},
+
+
+		{
+			"id": "10",
+			"content": "Bah belle forcément ! ",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 11
+		},
+		{
+			"id": "11",
+			"content": "J’suis pas méchante, en plus je ne la connais pas. ",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 12
+		},
+
+
+		{
+			"id": "12",
+      "content": "C’est encore du cyberharcèlement.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":3,
+      "chapterTarget": 4,
+      "messageTarget": 15
+		},
+		{
+      "id": "13",
+      "content": "C’est lourd et même pas marrant.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+      "chapterTarget": 4,
+      "messageTarget": 15
+		},
+		{
+      "id": "14",
+      "content": "C’est pas si grave, un peu d’humour rooh !",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+      },
+      "chapterTarget": 4,
+      "messageTarget": 15
+		},
+
+
+		{
+			"id": "15",
+			"content": "Moi ça me rend mega triste au fond...",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 16
+		},
+
+
+		{
+      "id": "16",
+      "content": "Prends de la distance ! Tu sais que si c’est trop dérangeant pour elle, elle peut agir :",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 4,
+      "messageTarget": 17
+		},
+		{
+      "id": "17",
+      "content": "Elle peut signaler la story",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":2,
+      "chapterTarget": 4,
+      "messageTarget": 19
+		},
+		{
+      "id": "18",
+      "content": "Faire un screen et dénoncer à un prof par exemple",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 4,
+      "messageTarget": 19
+		},
+
+
+		{
+			"id": "19",
+			"content": "J’en ai marre de tout le temps devoir réagir.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 20
+		},
+
+
+		{
+      "id": "20",
+      "content": "J’avoue tu te prends vraiment la tête",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"choices":2,
+      "chapterTarget": 4,
+      "messageTarget": 21
+		},
+		{
+      "id": "21",
+      "content": "Ouai mais là tu ne peux pas laisser passer ça.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+      "chapterTarget": 4,
+      "messageTarget": 22
+		},
+		{
+      "id": "22",
+      "content": "Après, ne rien dire c’est cautionner.",
+      "type": "text",
+      "category": "answer",
+      "date": {
+        "day": "01",
+        "hour": "18",
+        "min": "13"
+			},
+			"auto":"true",
+      "chapterTarget": 4,
+      "messageTarget": 23
+		},
+
+
+		{
+			"id": "23",
+			"content": "Ouai c’est vrai que je risque de me sentir coupable.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 24
+		},
+		{
+			"id": "24",
+			"content": "Je vais faire ça alors.",
+			"type": "text",
+			"category": "app",
+			"date": {
+				"day": "01",
+				"hour": "18",
+				"min": "13"
+			},
+			"chapterTarget": 4,
+			"messageTarget": 25
+		},
+
+
+		{
+			"id": "25",
+			"content": "Chapitre 6 : Faux compte et insultes",
+			"type": "text",
+			"category": "transition",
+			"date": "This is the date !",
+			"chapterTarget": 4,
+			"messageTarget": 0
+		}
+
+	]
 ]
