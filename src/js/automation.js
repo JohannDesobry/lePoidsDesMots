@@ -183,7 +183,6 @@ export default class Automation {
 
           // Get the current message to display
           let messageContent = this.story[this.i][this.j].content
-          console.log(`current message : ${messageContent}`)
 
           // Creates the element to append in device__content
           let div = document.createElement("DIV")
@@ -220,14 +219,12 @@ export default class Automation {
           }, 1100)
           
           // timeHeader.innerHTML = this.story[this.i][this.j].date.hour
-          console.log(`app text : yeah`)
 
           this.playState = "play"
         }
 
         // App message > GIF
         else if ( this.story[this.i][this.j].type == 'gif' ) {
-          console.log(`type : gif`)
 
           // waiting message animation
           writingApp()
@@ -286,7 +283,6 @@ export default class Automation {
 
         // App message > EMOJI
         else if ( this.story[this.i][this.j].type == 'emoji' ) {
-          console.log(`type : emoji`)
 
           // waiting message animation
           writingApp()
@@ -322,8 +318,6 @@ export default class Automation {
           // Stock chapter and/or next message to recuperate in callback
           this.nextChapter = this.story[this.i][this.j].chapterTarget
           this.nextMessage = this.story[this.i][this.j].messageTarget
-          console.log(this.nextChapter)
-          console.log(this.nextMessage)
 
         }
 
@@ -370,9 +364,6 @@ export default class Automation {
           setTimeout(function() {
 
             _this.deviceContent.appendChild(wrapper)
-            
-
-            // console.log(`timeHeader : ${timeHeader}`)
 
             // Scroll window to see last messages if they're hidden
             scroll()
@@ -385,8 +376,6 @@ export default class Automation {
           // Stock chapter and/or next message to recuperate in callback
           this.nextChapter = this.story[this.i][this.j].chapterTarget
           this.nextMessage = this.story[this.i][this.j].messageTarget
-          console.log(`first image ${this.nextChapter}`)
-          console.log(`first image ${this.nextMessage}`)
         
         }
         // END app > message > IMAGE
@@ -399,16 +388,13 @@ export default class Automation {
       
         displayAnswers()
 
-        console.log(`I am the first`)
         // Stop messages displaying
         this.playState = "pause"
 
         let textAnswers = document.querySelector('.device__answersText')
         let x = this.story[this.i][this.j].choices
-        console.log(x)
 
         for( let i = 0 ; i < x ; i++ ){
-          console.log(`this is choice : ${i}`)
           let div = document.createElement("DIV")
           div.classList.add('device__answersTextInput')
           let p = document.createElement("P")
@@ -425,22 +411,14 @@ export default class Automation {
           this.nextMessage = this.story[this.i][this.j+i].messageTarget
           
           textAnswers.appendChild(div)
-          console.log("yaw")
           
           let a = this.nextChapter
           let b = this.nextMessage
           let currentChapter = this.i
           let currentMessage = this.j+i
-          console.log(a)
-          console.log(b)
-
+    
           let _this = this
           div.addEventListener('click', () => {
-            console.log('change chapter')
-            console.log(a)
-            console.log(b)
-            //console.log(currentChapter)
-            //console.log(currentMessage)
 
             // Creates the element to append in device__content
             let container = document.createElement("DIV")
@@ -462,7 +440,6 @@ export default class Automation {
             sentSound.play()
             if (_this.story[_this.i][_this.j].correct)
             {
-              console.log('MOMOOMOMO')
               container.classList.add('correct')
             }
             this.deviceContent.appendChild(container)
@@ -482,8 +459,6 @@ export default class Automation {
 
               _this.displayAppMessages(a,b)
               // audioNotif.play()
-              console.log('JOHANN')
-              console.log(`next message  choiccces : ${a}-${b}`)
               //_this.playState = "play"
 
             }, 2000)
@@ -497,8 +472,6 @@ export default class Automation {
 
         // Answer > TEXT
         if ( this.story[this.i][this.j].type == "text" ) {
-
-          console.log("answer text")
 
           if ( this.story[this.i][this.j].auto == "true" ) {
 
@@ -535,13 +508,12 @@ export default class Automation {
             // Stock chapter and/or next message to recuperate in callback
             this.nextChapter = this.story[this.i][this.j].chapterTarget
             this.nextMessage = this.story[this.i][this.j].messageTarget
-            console.log('last message')
           }
 
           // text > CHOICES
-          else if ( this.story[this.i][this.j].choices ) {
-            console.log("choice")
-          }
+          // else if ( this.story[this.i][this.j].choices ) {
+          //   console.log("choice")
+          // }
 
         // if( this.story[this.i][this.j].choices == 3 ) {
         //   for( let i = 0 ; i < x ; i++ ){
@@ -595,7 +567,6 @@ export default class Automation {
 
           // text > AUTO
           else if ( this.story[this.i][this.j].auto ) {
-            console.log("auto")
             this.playState = "pause"
           }
         }
@@ -603,9 +574,7 @@ export default class Automation {
 
         // Answer > EMOJI
         else if ( this.story[this.i][this.j].type == "smiley" ) {
-          console.log(`this is a smiley`)
           this.playState = "pause"
-          console.log(this.playState)
           let smileyAnswers = document.querySelector('.device__answersEmoji')
           let x = this.story[this.i][this.j].choices
   
@@ -656,11 +625,6 @@ export default class Automation {
               let _this = this
 
               div.addEventListener('click', () => {
-                console.log('change chapter')
-                console.log(a)
-                console.log(b)
-                //console.log(currentChapter)
-                //console.log(currentMessage)
     
                 // Creates the element to append in device__content
                 
@@ -672,12 +636,11 @@ export default class Automation {
                 scroll()
     
                 _this.playState = "play"
-                console.log(_this.playState)
+
                 setTimeout(function() {
                   _this.i = a
                   _this.j = b
                   _this.displayAppMessages(a,b)
-                  console.log(`next message : ${a}-${b}`)
                 }, 2000)
     
               })
@@ -688,9 +651,7 @@ export default class Automation {
 
         // Answer > GIF
         else if ( this.story[this.i][this.j].type == "gif" ) {
-          console.log(`this is a GIF`)
           this.playState = "pause"
-          console.log(this.playState)
           let gifAnswers = document.querySelector('.device__answersGif')
           //let x = this.story[this.i][this.j].choices
 
@@ -717,11 +678,6 @@ export default class Automation {
               let currentChapter = this.i
               let currentMessage = this.j+i
               div.addEventListener('click', () => {
-                console.log('change chapter')
-                console.log(a)
-                console.log(b)
-                //console.log(currentChapter)
-                //console.log(currentMessage)
     
                 // Stock current context
                 let _this = this
@@ -774,12 +730,10 @@ export default class Automation {
                 scroll()
     
                 _this.playState = "play"
-                console.log(_this.playState)
                 setTimeout(function() {
                   _this.i = a
                   _this.j = b
                   _this.displayAppMessages(a,b)
-                  console.log(`next message : ${a}-${b}`)
                 }, 2000)
     
               })
@@ -873,7 +827,6 @@ export default class Automation {
         dayP.innerHTML = this.story[this.i][this.j].content
 
         const SAMUEL = document.querySelectorAll('.device__contentAnswerMessage')
-        console.log(SAMUEL)
 
         setTimeout(function() {
 
@@ -882,23 +835,12 @@ export default class Automation {
         }, 1500)
 
         this.playState = "pause"
-        console.log('CECI EST BIEN LA FIN NON TU NE REVES PAS SAMUEL')
 
       }
       
-      // else {
-      //   console.log("fini")
-      //   let _this = this
-      //   console.log(_this)
-      //   this.i++
-      //   setTimeout(function() {
-      //     _this.displayAppMessages(_this.j=0)
-      //   }, 1500)
-      // }
     }
 
-    console.log( `next chapter : ${this.nextChapter}` )
-    console.log(`next message : ${this.j}`)
+
     // Re-execute display function after a determined delay to display next app message
     if ( this.playState == "play" ) {
 
@@ -911,8 +853,6 @@ export default class Automation {
         _this.displayAppMessages(_this.nextChapter,_this.nextMessage)
         _this.i = _this.nextChapter
         _this.j = _this.nextMessage
-        console.log( `next chapter : ${_this.nextChapter}` )
-        console.log(`next message : ${_this.j}`)
       }, 2300)
     }
 
