@@ -10,6 +10,7 @@ console.log(`timeHeader : ${timeHeader}`)
 // const audioNotif = document.querySelector('audio')
 // const player = document.querySelector('.player')
 const notifSound = document.querySelector('.notif')
+const sentSound = document.querySelector('.send')
 
 const emojis = document.querySelector('.device__answersEmoji')
 const textSection = document.querySelector('.device__answersText'),
@@ -170,7 +171,7 @@ export default class Automation {
             _this.deviceContent.appendChild(div)
             let typed = new Typed(p, {
               strings: [messageContent],
-              typeSpeed: 20,
+              typeSpeed: 10,
               showCursor: false
             });
             // Scroll window to see last messages if they're hidden
@@ -420,11 +421,12 @@ export default class Automation {
             message.appendChild(p)
             container.appendChild(message)
             
+            sentSound.play()
 
             this.deviceContent.appendChild(container)
             let typed = new Typed(p, {
               strings: [msg],
-              typeSpeed: 20,
+              typeSpeed: 10,
               showCursor: false
             });
             timeHeader.innerHTML = this.story[this.i][this.j].date.hour
@@ -479,9 +481,11 @@ export default class Automation {
 
             this.deviceContent.appendChild(container)
 
+            sentSound.play()
+
             let typed = new Typed(p, {
               strings: [msg],
-              typeSpeed: 20,
+              typeSpeed: 10,
               showCursor: false
             });
             timeHeader.innerHTML = this.story[this.i][this.j].date.hour
@@ -616,7 +620,7 @@ export default class Automation {
                 // Creates the element to append in device__content
                 
                 this.deviceContent.appendChild(container)
-                
+                sentSound.play()
   
                 // displayAnswersEmoji()
                 removeEmojis()
@@ -712,6 +716,7 @@ export default class Automation {
                 })
 
                 this.deviceContent.appendChild(message)
+                sentSound.play()
                 timeHeader.innerHTML = this.story[this.i][this.j].date.hour
 
                 // displayAnswersEmoji()
