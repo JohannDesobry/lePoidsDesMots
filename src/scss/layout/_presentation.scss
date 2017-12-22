@@ -72,14 +72,14 @@
 .home__presentationContent p{
     width: 90%;
     margin: auto;
-    font-size: 14px;
+    font-size: 16px;
  
     @media (min-width: $lg)
     {
         width: 625px;
         height: auto;
         font-family: $main-font;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 300;
         line-height: 1.5;
         text-align: left;

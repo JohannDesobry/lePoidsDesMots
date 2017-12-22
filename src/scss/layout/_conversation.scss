@@ -15,6 +15,11 @@
         justify-content: space-between;
         margin-top: 105rem;
     }
+
+    @media (max-height: 700px) 
+    {
+        margin-top: 5.7rem;
+    }
 }
 
 .home__conversationPicture {
@@ -74,14 +79,14 @@
 .home__conversationContent p{
     width: 90%;
     margin: auto;
-    font-size: 14px;
+    font-size: 16px;
  
     @media (min-width: $lg)
     {
         width: 625px;
         height: auto;
         font-family: $main-font;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 300;
         line-height: 1.5;
         text-align: left;
