@@ -619,7 +619,6 @@ export default class Automation {
               img.src = this.story[this.i][this.j+i].src
               div.appendChild(img)
     
-              console.log("putain")
               // Stock chapter and/or next message to recuperate in callback
               this.nextChapter = this.story[this.i][this.j+i].chapterTarget
               this.nextMessage = this.story[this.i][this.j+i].messageTarget

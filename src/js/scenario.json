@@ -9,8 +9,8 @@
 				"hour": "18:20",
 				"min": "13"
 			},
-      "chapterTarget": 5,
-      "messageTarget": 14
+      "chapterTarget": 2,
+      "messageTarget": 1
 		},
 		{
 			"id": "1",
@@ -141,7 +141,7 @@
 			"choices":3,
 			"chapterTarget": 0,
 			"messageTarget": 12,
-			"src":"assets/img/face-with-rolling-eyes_1f644.png"
+			"src":"assets/img/emoji-etonne-01.png"
 		},
 		{
 			"id": "10",
@@ -155,7 +155,7 @@
 			},
       "chapterTarget": 0,
 			"messageTarget": 12,
-			"src":"assets/img/face-with-rolling-eyes_1f644.png"
+			"src":"assets/img/emoji-etonne-02.png"
 		},
 		{
 			"id": "11",
@@ -169,7 +169,7 @@
 			},
       "chapterTarget": 0,
 			"messageTarget": 12,
-			"src":"assets/img/face-with-rolling-eyes_1f644.png"			
+			"src":"assets/img/emoji-etonne-03.png"			
 		},
 
 
@@ -540,7 +540,7 @@
 				"hour": "18:40",
 				"min": "13"
 			},
-			"src": "https://media.giphy.com/media/yV5xcSTmtVPBS/giphy.gif",
+			"src": "assets/img/giphy-content-01.gif",
 			"choices": 3,
       "chapterTarget": 1,
       "messageTarget": 6
@@ -555,7 +555,7 @@
 				"hour": "18",
 				"min": "13"
 			},
-			"src": "https://media.giphy.com/media/3oxHQlgaA48kAfw2Dm/giphy.gif",
+			"src": "assets/img/giphy-content-02.gif",
       "chapterTarget": 1,
       "messageTarget": 6
 		},
@@ -569,7 +569,7 @@
 				"hour": "18",
 				"min": "13"
 			},
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/giphy-content-01.gif",
       "chapterTarget": 1,
       "messageTarget": 6
 		},
@@ -727,7 +727,7 @@
 				"min": "13"
 			},
 			"choices": 3,
-			"src": "https://media.giphy.com/media/3oxHQlgaA48kAfw2Dm/giphy.gif",
+			"src": "assets/img/emoji-disapointed-01.png",
       "chapterTarget": 1,
       "messageTarget": 19
 		},
@@ -741,7 +741,7 @@
 				"hour": "18",
 				"min": "13"
 			},
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-disapointed-02.png",
       "chapterTarget": 1,
       "messageTarget": 19
 		},
@@ -755,13 +755,13 @@
 				"hour": "18",
 				"min": "13"
 			},
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/emoji-disapointed-03.png",
       "chapterTarget": 1,
       "messageTarget": 19
 		},
 		{
 			"id": "19",
-			"content": "Aaah ouai dans ce cas c’est tendu.",
+			"content": "Aaah ouais dans ce cas c’est tendu.",
 			"type": "text",
 			"category": "answer",
 			"date": {
@@ -965,7 +965,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/GIF-choque-01.gif",
 			"choices": 3,
       "chapterTarget": 2,
       "messageTarget": 5
@@ -980,7 +980,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/GIF-choque-02.gif",
       "chapterTarget": 2,
       "messageTarget": 5
 		},
@@ -994,7 +994,7 @@
         "hour": "18",
         "min": "13"
       },
-			"src": "https://media.giphy.com/media/3drmEWeOUgzKg/giphy.gif",
+			"src": "assets/img/GIF-choque-03.gif",
       "chapterTarget": 2,
       "messageTarget": 5
     },
@@ -1845,7 +1845,7 @@
 
 		{
       "id": "1",
-      "content": "Ah ouai ?!",
+      "content": "Ah ouais ?!",
       "type": "text",
       "category": "answer",
       "date": {
@@ -2674,7 +2674,7 @@
 
 		{
 			"id": "33",
-			"content": "Chapitre 6 : Faux compte et insultes",
+			"content": "The END",
 			"type": "text",
 			"category": "end",
 			"date": "This is the date !"
